@@ -1,5 +1,6 @@
 import { Search, Code, Zap, Users, BarChart3, Clock, Star, Globe, ArrowRight } from 'lucide-react'
 import type { Agent, ProcessStep, Benefit, Stat, Testimonial, FAQ, FooterSection } from '@/types/homepage'
+import React from 'react'
 
 export const agents: Agent[] = [
   {
