@@ -1,0 +1,10 @@
+// Exportar todos los componentes de secciones
+export { Navigation } from './navigation'
+export { HeroSection } from './hero-section'
+export { ProcessSection } from './process-section'
+export { AgentsSection } from './agents-section'
+export { StatsSection } from './stats-section'
+export { TestimonialsSection } from './testimonials-section'
+export { FAQSection } from './faq-section'
+export { UrgencySection } from './urgency-section'
+export { Footer } from './footer'
