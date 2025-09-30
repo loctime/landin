@@ -126,3 +126,4 @@ npm run lint     # Linter (deshabilitado en build)
 
 Para soporte técnico o consultas sobre el deploy, contacta al equipo de desarrollo.
 
+
