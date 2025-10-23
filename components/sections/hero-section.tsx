@@ -22,7 +22,7 @@ const HeroSection = React.memo(() => {
         <div className="scroll-animate opacity-0 translate-y-8 mb-8 sm:mb-12">
           <div className="w-48 h-48 sm:w-64 sm:h-64 mx-auto bg-gradient-to-b from-gray-700 to-gray-900 rounded-full flex items-center justify-center border-4 border-opptim-green/30 shadow-2xl shadow-opptim-green/20">
             <Image 
-              src="/opptimlogo-png.png" 
+              src="/ultimo.gif" 
               alt="Opptim.Ai" 
               width={160} 
               height={160}
