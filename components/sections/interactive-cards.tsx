@@ -58,7 +58,7 @@ export const InteractiveCards = () => {
   ]
 
   return (
-    <section className="py-16 sm:py-24 bg-gradient-to-b from-black via-gray-950 to-black relative overflow-hidden">
+    <section className="py-12 sm:py-20 bg-gradient-to-b from-black via-gray-950 to-black relative overflow-hidden">
       {/* Grid de fondo animado */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
         <motion.div
@@ -87,7 +87,7 @@ export const InteractiveCards = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <motion.div
             animate={{
@@ -112,22 +112,22 @@ export const InteractiveCards = () => {
                 }}
                 className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full blur-xl"
               />
-              <Sparkles className="w-12 h-12 text-emerald-400 relative" />
+              <Sparkles className="w-10 h-10 text-emerald-400 relative" />
             </div>
           </motion.div>
 
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             Stack{' '}
             <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
               Tecnológico
             </span>
           </h2>
-          <p className="text-gray-400 text-lg sm:text-xl max-w-3xl mx-auto">
+          <p className="text-gray-400 text-base sm:text-lg max-w-3xl mx-auto">
             Las mejores herramientas para construir soluciones excepcionales
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {technologies.map((tech, index) => (
             <InteractiveTechCard key={index} {...tech} index={index} />
           ))}
@@ -139,12 +139,12 @@ export const InteractiveCards = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="text-center mt-16"
+          className="text-center mt-10"
         >
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="relative group px-8 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full font-bold text-white text-lg overflow-hidden"
+            className="relative group px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full font-bold text-white text-base overflow-hidden"
           >
             <motion.div
               animate={{
@@ -217,7 +217,7 @@ const InteractiveTechCard = ({
         transition={{ duration: 0.3 }}
         className="h-full"
       >
-        <Card className="relative bg-gray-900/80 backdrop-blur-sm border-gray-700/50 p-8 overflow-hidden group hover:border-emerald-500/50 transition-all duration-500 h-full">
+        <Card className="relative bg-gray-900/80 backdrop-blur-sm border-gray-700/50 p-4 sm:p-5 overflow-hidden group hover:border-emerald-500/50 transition-all duration-500 h-full">
           {/* Partículas flotantes */}
           {Array.from({ length: particles }).map((_, i) => (
             <motion.div
@@ -266,7 +266,7 @@ const InteractiveTechCard = ({
               rotateY: 360,
               transition: { duration: 0.8 },
             }}
-            className="relative mb-6"
+            className="relative mb-4"
           >
             <motion.div
               animate={{
@@ -279,7 +279,7 @@ const InteractiveTechCard = ({
               }}
               className={`absolute inset-0 bg-gradient-to-r ${gradient} blur-2xl opacity-40`}
             />
-            <div className={`relative w-20 h-20 bg-gradient-to-br ${gradient} rounded-3xl flex items-center justify-center shadow-2xl`}>
+            <div className={`relative w-14 h-14 bg-gradient-to-br ${gradient} rounded-2xl flex items-center justify-center shadow-2xl`}>
               <motion.div
                 animate={{
                   scale: [1, 1.1, 1],
@@ -291,7 +291,7 @@ const InteractiveTechCard = ({
                   delay: index * 0.2,
                 }}
               >
-                <Icon className="w-10 h-10 text-white" />
+                <Icon className="w-7 h-7 text-white" />
               </motion.div>
             </div>
           </motion.div>
@@ -303,8 +303,8 @@ const InteractiveTechCard = ({
               transform: 'translateZ(20px)',
             }}
           >
-            <h3 className="text-2xl font-bold text-white mb-3">{name}</h3>
-            <p className="text-gray-400 mb-4 leading-relaxed">
+            <h3 className="text-lg sm:text-xl font-bold text-white mb-2">{name}</h3>
+            <p className="text-gray-400 text-sm mb-3 leading-relaxed">
               {description}
             </p>
 
@@ -318,7 +318,7 @@ const InteractiveTechCard = ({
                   viewport={{ once: true }}
                   transition={{ delay: 0.5 + i * 0.1 }}
                   whileHover={{ scale: 1.1, y: -2 }}
-                  className={`px-3 py-1 bg-gradient-to-r ${gradient} rounded-full text-white text-xs font-medium`}
+                  className={`px-2 py-0.5 bg-gradient-to-r ${gradient} rounded-full text-white text-xs font-medium`}
                 >
                   {t}
                 </motion.span>

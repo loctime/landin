@@ -11,27 +11,29 @@ const HeroSection = React.memo(() => {
 
   return (
     <section className="min-h-screen bg-black flex items-center justify-center relative overflow-hidden">
-      {/* Efectos de fondo */}
+      {/* GIF de fondo */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="relative w-full h-full scale-[1.00]">
+          <Image 
+            src="/ultimo.gif" 
+            alt="Background" 
+            fill
+            className="object-contain opacity-30"
+            priority
+            unoptimized
+          />
+        </div>
+        {/* Overlay oscuro para mejor legibilidad */}
+        <div className="absolute inset-0 bg-black/40" />
+      </div>
+
+      {/* Efectos de fondo adicionales */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-opptim-green/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-opptim-turquoise/10 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center relative z-10">
-        {/* Logo Opptim.Ai */}
-        <div className="scroll-animate opacity-0 translate-y-8 mb-8 sm:mb-12">
-          <div className="w-48 h-48 sm:w-64 sm:h-64 mx-auto bg-gradient-to-b from-gray-700 to-gray-900 rounded-full flex items-center justify-center border-4 border-opptim-green/30 shadow-2xl shadow-opptim-green/20">
-            <Image 
-              src="/ultimo.gif" 
-              alt="Opptim.Ai" 
-              width={160} 
-              height={160}
-              className="w-24 h-24 sm:w-32 sm:h-32"
-              priority
-            />
-          </div>
-        </div>
-
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center relative z-20">
         <div className="scroll-animate opacity-0 translate-y-8">
           <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-white mb-4 sm:mb-6 text-balance">
             Ahorra tiempo y dinero con{" "}

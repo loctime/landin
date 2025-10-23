@@ -82,21 +82,21 @@ export const FeaturesAnimated = () => {
   }
 
   return (
-    <section className="py-16 sm:py-24 bg-gradient-to-b from-black via-gray-900 to-black overflow-hidden">
+    <section className="py-12 sm:py-16 bg-gradient-to-b from-black via-gray-900 to-black overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <motion.h2
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4"
           >
             Características{' '}
             <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
@@ -108,7 +108,7 @@ export const FeaturesAnimated = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-gray-400 text-lg sm:text-xl max-w-3xl mx-auto"
+            className="text-gray-400 text-base sm:text-lg max-w-3xl mx-auto"
           >
             Tecnología de punta diseñada para transformar tu negocio
           </motion.p>
@@ -119,7 +119,7 @@ export const FeaturesAnimated = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
         >
           {features.map((feature, index) => (
             <motion.div key={index} variants={itemVariants}>
@@ -132,7 +132,7 @@ export const FeaturesAnimated = () => {
                 }}
                 className="h-full"
               >
-                <Card className="relative bg-gray-900/50 border-gray-700/50 p-8 overflow-hidden group hover:border-emerald-500/50 transition-colors duration-500 h-full">
+                <Card className="relative bg-gray-900/50 border-gray-700/50 p-4 sm:p-6 overflow-hidden group hover:border-emerald-500/50 transition-colors duration-500 h-full">
                   {/* Gradient Background animado */}
                   <motion.div
                     className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
@@ -179,7 +179,7 @@ export const FeaturesAnimated = () => {
                       scale: 1.2,
                     }}
                     transition={{ duration: 0.5 }}
-                    className="relative mb-6"
+                    className="relative mb-4"
                   >
                     <motion.div
                       animate={{
@@ -192,16 +192,16 @@ export const FeaturesAnimated = () => {
                       }}
                       className={`absolute inset-0 bg-gradient-to-r ${feature.color} opacity-20 blur-xl`}
                     />
-                    <div className={`relative w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center shadow-lg`}>
-                      <feature.icon className="w-8 h-8 text-white" />
+                    <div className={`relative w-12 h-12 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center shadow-lg`}>
+                      <feature.icon className="w-6 h-6 text-white" />
                     </div>
                   </motion.div>
 
                   {/* Contenido */}
-                  <h3 className="text-2xl font-bold text-white mb-3 relative z-10">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2 relative z-10">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-400 mb-6 relative z-10 leading-relaxed">
+                  <p className="text-gray-400 text-sm mb-4 relative z-10 leading-relaxed">
                     {feature.description}
                   </p>
 
@@ -213,7 +213,7 @@ export const FeaturesAnimated = () => {
                     transition={{ delay: 0.3 + index * 0.1 }}
                     className="relative z-10"
                   >
-                    <div className={`inline-flex items-center gap-2 bg-gradient-to-r ${feature.color} px-4 py-2 rounded-full`}>
+                    <div className={`inline-flex items-center gap-2 bg-gradient-to-r ${feature.color} px-3 py-1.5 rounded-full`}>
                       <motion.span
                         animate={{
                           scale: [1, 1.1, 1],
@@ -223,11 +223,11 @@ export const FeaturesAnimated = () => {
                           repeat: Infinity,
                           delay: index * 0.2,
                         }}
-                        className="text-white font-bold text-lg"
+                        className="text-white font-bold text-base"
                       >
                         {feature.stats}
                       </motion.span>
-                      <span className="text-white/80 text-sm">{feature.label}</span>
+                      <span className="text-white/80 text-xs">{feature.label}</span>
                     </div>
                   </motion.div>
 
@@ -255,7 +255,7 @@ export const FeaturesAnimated = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="text-center mt-16"
+          className="text-center mt-8"
         >
           <motion.div
             animate={{
