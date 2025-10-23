@@ -13,6 +13,7 @@ import {
   FAQSection,
   UrgencySection,
   Footer,
+  InteractiveCards,
 } from '@/components/sections'
 
 export default function HomePage() {
@@ -27,6 +28,8 @@ export default function HomePage() {
       <AboutSection />
       <PricingBanner />
       <ProcessSection />
+      {/* Stack tecnológico interactivo */}
+      <InteractiveCards />
       <TestimonialsSection />
       <FAQSection />
       <UrgencySection />

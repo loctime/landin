@@ -10,3 +10,8 @@ export { TestimonialsSection } from './testimonials-section'
 export { FAQSection } from './faq-section'
 export { UrgencySection } from './urgency-section'
 export { Footer } from './footer'
+
+// Nuevos componentes animados
+export { FeaturesAnimated } from './features-animated'
+export { StatsAnimated } from './stats-animated'
+export { InteractiveCards } from './interactive-cards'
