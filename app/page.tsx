@@ -4,9 +4,11 @@ import { useScrollAnimation } from '@/hooks/use-scroll-animation'
 import {
   Navigation,
   HeroSection,
+  StatsSection,
   ProcessSection,
   AgentsSection,
-  StatsSection,
+  AboutSection,
+  PricingBanner,
   TestimonialsSection,
   FAQSection,
   UrgencySection,
@@ -21,8 +23,10 @@ export default function HomePage() {
       <Navigation />
       <HeroSection />
       <StatsSection />
-      <ProcessSection />
       <AgentsSection />
+      <AboutSection />
+      <PricingBanner />
+      <ProcessSection />
       <TestimonialsSection />
       <FAQSection />
       <UrgencySection />

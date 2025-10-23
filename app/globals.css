@@ -10,33 +10,34 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.08 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.7 0.15 160);
+  /* Opptim.Ai colors - Green: #45C789, Turquoise: #36D6E6, Blue: #367DE6 */
+  --primary: oklch(0.72 0.14 158);
   --primary-foreground: oklch(0.02 0 0);
-  --secondary: oklch(0.15 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.78 0.12 195);
+  --secondary-foreground: oklch(0.02 0 0);
+  --accent: oklch(0.68 0.15 230);
+  --accent-foreground: oklch(0.985 0 0);
   --muted: oklch(0.15 0 0);
   --muted-foreground: oklch(0.6 0 0);
-  --accent: oklch(0.15 0 0);
-  --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
   --border: oklch(0.2 0 0);
   --input: oklch(0.2 0 0);
-  --ring: oklch(0.7 0.15 160);
-  --chart-1: oklch(0.7 0.15 160);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
+  --ring: oklch(0.72 0.14 158);
+  --chart-1: oklch(0.72 0.14 158);
+  --chart-2: oklch(0.78 0.12 195);
+  --chart-3: oklch(0.68 0.15 230);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
   --radius: 0.625rem;
   --sidebar: oklch(0.08 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.7 0.15 160);
+  --sidebar-primary: oklch(0.72 0.14 158);
   --sidebar-primary-foreground: oklch(0.02 0 0);
   --sidebar-accent: oklch(0.15 0 0);
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.2 0 0);
-  --sidebar-ring: oklch(0.7 0.15 160);
+  --sidebar-ring: oklch(0.72 0.14 158);
 }
 
 @theme inline {
@@ -150,10 +151,43 @@ html {
   }
 }
 
-/* Gradientes personalizados */
+/* Gradientes personalizados - Opptim.Ai */
 .gradient-text {
-  background: linear-gradient(135deg, #10b981, #34d399);
+  background: linear-gradient(135deg, #45C789, #36D6E6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Custom Opptim.Ai colors */
+.bg-opptim-green {
+  background-color: #45C789;
+}
+
+.bg-opptim-turquoise {
+  background-color: #36D6E6;
+}
+
+.bg-opptim-blue {
+  background-color: #367DE6;
+}
+
+.text-opptim-green {
+  color: #45C789;
+}
+
+.text-opptim-turquoise {
+  color: #36D6E6;
+}
+
+.text-opptim-blue {
+  color: #367DE6;
+}
+
+.border-opptim-green {
+  border-color: #45C789;
+}
+
+.hover-glow-opptim:hover {
+  box-shadow: 0 0 20px rgba(69, 199, 137, 0.4);
 }

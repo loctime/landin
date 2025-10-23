@@ -4,35 +4,35 @@ import React from 'react'
 
 export const agents: Agent[] = [
   {
-    name: "Orion",
+    name: "Mini Recordatorio",
+    specialty: "Recordatorios de Citas",
+    avatar: "⏰",
+    description: "Envía recordatorios automáticos de citas a tus clientes vía WhatsApp",
+  },
+  {
+    name: "Chatbot Básico",
     specialty: "Atención al Cliente",
+    avatar: "💬",
+    description: "Responde consultas frecuentes y atiende a tus clientes 24/7",
+  },
+  {
+    name: "Chatbot Plus",
+    specialty: "Atención Avanzada",
     avatar: "🤖",
-    description: "Especialista en resolver consultas y brindar soporte 24/7",
-  },
-  {
-    name: "Nova",
-    specialty: "Llamadas Entrantes",
-    avatar: "👩‍💼",
-    description: "Gestiona y optimiza todas las comunicaciones entrantes",
-  },
-  {
-    name: "Echo",
-    specialty: "Gestor de Reservas",
-    avatar: "👨‍💻",
-    description: "Automatiza reservas y gestión de citas de manera inteligente",
+    description: "IA conversacional avanzada con integración a múltiples plataformas",
     featured: true,
   },
   {
-    name: "Astra",
-    specialty: "Automatizar Recordatorios",
-    avatar: "🚀",
-    description: "Mantiene a tus clientes informados con recordatorios personalizados",
+    name: "Agente Telefónico",
+    specialty: "Llamadas Automatizadas",
+    avatar: "📞",
+    description: "Gestiona llamadas entrantes y salientes de forma inteligente",
   },
   {
-    name: "Iris",
-    specialty: "Análisis Avanzado",
-    avatar: "👁️",
-    description: "Proporciona insights profundos sobre el comportamiento del cliente",
+    name: "Gestor de Pagos",
+    specialty: "Automatización de Cobros",
+    avatar: "💳",
+    description: "Automatiza recordatorios de pago y gestión de cobros",
   },
 ]
 
@@ -100,63 +100,63 @@ export const benefits: Benefit[] = [
 ]
 
 export const stats: Stat[] = [
-  { number: "300%", label: "Más leads generados" },
-  { number: "24/7", label: "Disponibilidad" },
-  { number: "48h", label: "Tiempo de setup" },
-  { number: "95%", label: "Satisfacción cliente" },
+  { number: "100%", label: "Atención personalizada" },
+  { number: "24/7", label: "Disponibilidad total" },
+  { number: "39€", label: "Desde sólo" },
+  { number: "100%", label: "Resultados garantizados" },
 ]
 
 export const testimonials: Testimonial[] = [
   {
-    text: "Desde que usamos Echo y Nova nuestras reservas de citas subieron un 27% y estamos 100% menos libres. Esto me libera para centrarme en mis pacientes.",
-    author: "Santiago López",
-    role: "Propietario, Dental Services",
+    text: "Desde que empezamos a trabajar con Opptim.Ai, nuestra atención al paciente cambió por completo. Implementaron automatizaciones con IA que gestionan las citas, recordatorios y seguimiento post-tratamiento de forma impecable. Antes perdíamos mucho tiempo en tareas repetitivas, ahora nuestro equipo puede enfocarse en lo importante: atender bien a nuestros pacientes. ¡Un antes y un después para nuestra clínica!",
+    author: "Dr. García",
+    role: "Director, Clínica Dental",
     avatar: "👨‍⚕️",
-    result: "+27% reservas",
+    result: "Ahorro de 15h/semana",
   },
   {
-    text: "La automatización con Astra ha revolucionado nuestro seguimiento de clientes. Ahora no perdemos ninguna oportunidad de venta.",
-    author: "María González",
-    role: "Directora, Tech Solutions",
-    avatar: "👩‍💼",
-    result: "+45% conversiones",
+    text: "Ha sido un éxito total. Ahora nuestros pacientes reciben respuestas automáticas en WhatsApp y recordatorios personalizados sin que nadie del equipo tenga que intervenir. Además, las estadísticas que nos muestran ayudan a entender mejor el comportamiento de nuestros pacientes. Eficiencia, modernidad y resultados. ¡Los recomendamos al 100%!",
+    author: "Ana Martínez",
+    role: "Gerente, Centro Médico",
+    avatar: "👩‍⚕️",
+    result: "95% satisfacción",
   },
   {
-    text: "Iris nos proporciona insights que nunca habríamos descubierto por nosotros mismos. Es como tener un analista senior 24/7.",
+    text: "Trabajar con Opptim.Ai fue una de las mejores decisiones del año. Nos ayudaron a automatizar el flujo de nuevos pacientes y a conectar el sistema de reservas con nuestra agenda digital. Lo que antes era un caos de mensajes ahora está completamente organizado. Además, su soporte es excelente: siempre disponibles y con soluciones rápidas. La IA realmente nos ha hecho la vida más fácil.",
     author: "Carlos Ruiz",
-    role: "CEO, StartupX",
-    avatar: "👨‍💻",
-    result: "+300% leads",
+    role: "Propietario, Consulta Privada",
+    avatar: "👨‍💼",
+    result: "+40% eficiencia",
   },
 ]
 
 export const faqs: FAQ[] = [
   {
-    question: "¿Qué es un agente de IA?",
+    question: "¿Qué es una automatización con inteligencia artificial?",
     answer:
-      "Un agente de IA es un sistema inteligente que puede realizar tareas específicas de manera autónoma, aprendiendo y adaptándose a las necesidades de tu negocio para optimizar procesos y mejorar la eficiencia.",
+      "Las automatizaciones con IA son sistemas que permiten ejecutar tareas repetitivas o de atención al cliente de forma automática, utilizando algoritmos inteligentes. Por ejemplo, respuestas automáticas en WhatsApp, gestión de citas, recordatorios o segmentación de pacientes. Todo funciona en piloto automático, ahorrando tiempo y recursos a tu equipo.",
   },
   {
-    question: "¿En qué se diferencia un agente de IA de un chatbot?",
+    question: "¿Qué beneficios obtiene mi negocio al automatizar procesos?",
     answer:
-      "Mientras que un chatbot responde a preguntas predefinidas, nuestros agentes de IA pueden tomar decisiones complejas, integrarse con múltiples sistemas y ejecutar acciones específicas basadas en el contexto y los datos en tiempo real.",
+      "Automatizar te permite ahorrar tiempo, reducir errores humanos, mejorar la atención al cliente y aumentar tus ventas. Además, la IA aprende con el tiempo, lo que hace que tus procesos sean cada vez más eficientes. En pocas semanas, notarás que tu equipo trabaja menos en tareas manuales y más en lo que realmente genera valor.",
   },
   {
-    question: "¿Necesito conocimientos técnicos para usar un agente de IA?",
+    question: "¿Se pueden integrar las automatizaciones con mis herramientas actuales (WhatsApp, redes sociales, etc.)?",
     answer:
-      "No, nuestros agentes están diseñados para ser intuitivos y fáciles de usar. Nos encargamos de toda la configuración técnica y te proporcionamos una interfaz simple para gestionar y monitorear tus agentes.",
+      "¡Sí! Nuestras automatizaciones se integran fácilmente con plataformas como WhatsApp Business, Google Calendar, HubSpot, Notion, Facebook, Instagram, entre otras. Nos adaptamos a tu flujo de trabajo para que no tengas que cambiar nada, solo mejorar lo que ya haces.",
   },
   {
-    question: "¿Qué tipo de tareas puede realizar un agente de IA?",
+    question: "¿Necesito conocimientos técnicos para usar las automatizaciones?",
     answer:
-      "Nuestros agentes pueden gestionar reservas, atender consultas de clientes, enviar recordatorios, analizar datos, generar reportes, y mucho más. Cada agente se especializa en áreas específicas para maximizar su efectividad.",
+      "No. Nuestro equipo se encarga de todo: configuración, implementación y mantenimiento. Tú solo verás los resultados funcionando. Además, te damos una capacitación breve para que puedas entender y controlar tus sistemas sin complicaciones.",
   },
 ]
 
 export const footerSections: FooterSection[] = [
   {
     title: "Navegación",
-    links: ["Agentes", "Proceso", "Soluciones", "FAQ"],
+    links: ["Servicios", "Sobre Nosotros", "Testimonios", "FAQ"],
   },
   {
     title: "Legal",
@@ -164,14 +164,21 @@ export const footerSections: FooterSection[] = [
   },
   {
     title: "Síguenos",
-    links: ["LinkedIn", "Twitter", "YouTube"],
+    links: ["Instagram", "LinkedIn", "WhatsApp"],
   },
 ]
 
 export const companyLogos = [
-  "TechCorp",
-  "DentalPro", 
-  "StartupX",
-  "RetailMax",
-  "Service+"
+  "Clínicas Dentales",
+  "Centros Médicos", 
+  "Consultas Privadas",
+  "Centros Estéticos",
+  "Fisioterapia"
 ]
+
+export const contactInfo = {
+  phone: "+34 633 57 28 77",
+  email: "contact@opptimai.es",
+  instagram: "opptim.ai",
+  whatsapp: "https://wa.me/34633572877"
+}

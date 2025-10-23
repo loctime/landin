@@ -1,9 +1,11 @@
 // Exportar todos los componentes de secciones
 export { Navigation } from './navigation'
 export { HeroSection } from './hero-section'
+export { StatsSection } from './stats-section'
 export { ProcessSection } from './process-section'
 export { AgentsSection } from './agents-section'
-export { StatsSection } from './stats-section'
+export { AboutSection } from './about-section'
+export { PricingBanner } from './pricing-banner'
 export { TestimonialsSection } from './testimonials-section'
 export { FAQSection } from './faq-section'
 export { UrgencySection } from './urgency-section'

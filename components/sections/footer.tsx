@@ -1,29 +1,43 @@
 'use client'
 
 import React from 'react'
-import { Zap, ArrowRight } from 'lucide-react'
+import { ArrowRight, Mail, Phone, Instagram } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { footerSections } from '@/data/homepage-data'
+import { footerSections, contactInfo } from '@/data/homepage-data'
+import Image from 'next/image'
 
 const Footer = React.memo(() => {
   return (
-    <footer className="bg-black border-t border-emerald-500/20 py-8 sm:py-12">
+    <footer className="bg-black border-t border-opptim-green/20 py-8 sm:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center">
-                <Zap className="w-5 h-5 text-black" />
-              </div>
-              <span className="text-xl font-bold text-white">
-                Service.<span className="text-emerald-400">ai</span>
-              </span>
+            <div className="mb-4">
+              <Image 
+                src="/opptim2png.png" 
+                alt="Opptim.Ai" 
+                width={150} 
+                height={40}
+                className="h-8 w-auto mb-4"
+              />
             </div>
             <p className="text-gray-400 text-sm mb-4">
-              Automatización inteligente.
-              <br />
-              Transforma tu crecimiento.
+              Ahorra tiempo y dinero con agentes de IA
             </p>
+            <div className="space-y-2 text-sm">
+              <a href={`tel:${contactInfo.phone}`} className="flex items-center text-gray-400 hover:text-opptim-green transition-colors">
+                <Phone className="w-4 h-4 mr-2" />
+                {contactInfo.phone}
+              </a>
+              <a href={`mailto:${contactInfo.email}`} className="flex items-center text-gray-400 hover:text-opptim-green transition-colors">
+                <Mail className="w-4 h-4 mr-2" />
+                {contactInfo.email}
+              </a>
+              <a href={`https://instagram.com/${contactInfo.instagram}`} target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-400 hover:text-opptim-green transition-colors">
+                <Instagram className="w-4 h-4 mr-2" />
+                @{contactInfo.instagram}
+              </a>
+            </div>
           </div>
 
           {footerSections.map((section, index) => (
@@ -32,7 +46,7 @@ const Footer = React.memo(() => {
               <ul className="space-y-2">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm">
+                    <a href="#" className="text-gray-400 hover:text-opptim-green transition-colors text-sm">
                       {link}
                     </a>
                   </li>
@@ -42,34 +56,39 @@ const Footer = React.memo(() => {
           ))}
         </div>
 
-        <div className="border-t border-emerald-500/20 mt-12 pt-8">
+        <div className="border-t border-opptim-green/20 mt-12 pt-8">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-white mb-4">
-              ¿Listo para <span className="text-emerald-400">multiplicar</span> tus resultados?
+              ¿Listo para <span className="text-opptim-green">automatizar</span> tu negocio?
             </h3>
             <p className="text-gray-400 mb-6">
-              Únete a más de 500+ empresas que ya automatizaron su negocio
+              Únete a las empresas que ya automatizaron sus procesos con IA
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-700 text-black font-medium px-8 py-4 text-lg">
-                🚀 Empezar Gratis Ahora
+              <Button 
+                size="lg" 
+                className="bg-opptim-green hover:bg-opptim-green/90 active:bg-opptim-green/80 text-black font-medium px-8 py-4 text-lg"
+                onClick={() => window.open(contactInfo.whatsapp, '_blank')}
+              >
+                💬 Contactar por WhatsApp
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/10 active:bg-emerald-500/20 px-8 py-4 text-lg bg-transparent"
+                className="border-opptim-turquoise/30 text-opptim-turquoise hover:bg-opptim-turquoise/10 active:bg-opptim-turquoise/20 px-8 py-4 text-lg bg-transparent"
+                onClick={() => window.open(`mailto:${contactInfo.email}`, '_blank')}
               >
-                📞 Hablar con un Experto
+                📧 Enviar Email
               </Button>
             </div>
             <p className="text-xs text-gray-500 mt-4">
-              Sin compromiso • Setup en 48h • Soporte 24/7
+              Atención 100% personalizada • Disponibilidad 24/7 • Resultados garantizados
             </p>
           </div>
           
           <div className="text-center">
-            <p className="text-gray-400 text-sm">© 2025 Service.ai LLC - Todos los derechos reservados.</p>
+            <p className="text-gray-400 text-sm">© 2025 Opptim.Ai - Todos los derechos reservados.</p>
           </div>
         </div>
       </div>
