@@ -18,13 +18,14 @@ const HeroSection = React.memo(() => {
             src="/ultimo.gif" 
             alt="Background" 
             fill
-            className="object-contain opacity-30"
+            className="object-contain opacity-50"
             priority
             unoptimized
+            style={{ filter: 'blur(1px) brightness(1.3) contrast(1.15) saturate(1.2) drop-shadow(0 0 40px rgba(0, 200, 255, 0.6)) drop-shadow(0 0 80px rgba(0, 180, 255, 0.4))' }}
           />
         </div>
         {/* Overlay oscuro para mejor legibilidad */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/25" />
       </div>
 
       {/* Efectos de fondo adicionales */}
