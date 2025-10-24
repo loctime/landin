@@ -66,14 +66,19 @@ const AgentsSection = React.memo(() => {
           </h2>
         </motion.div>
 
-        {/* Grid 2x2 profesional y tecnológico */}
+        {/* Layout con grid de agentes y video */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-6xl mx-auto relative"
+          className="max-w-7xl mx-auto relative"
         >
+          {/* Layout responsive: grid + video */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            
+            {/* Grid 2x2 profesional y tecnológico */}
+            <div className="relative">
           {/* Línea horizontal separadora con efecto glow */}
           <div className="w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent mb-12 opacity-60"></div>
           
@@ -140,15 +145,15 @@ const AgentsSection = React.memo(() => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
               whileHover={{ scale: 1.02, y: -5 }}
-              className="p-4 sm:p-6 lg:p-8 relative group border-r-0 sm:border-r border-b border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300"
+              className="p-3 sm:p-4 lg:p-5 relative group border-r-0 sm:border-r border-b border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300"
             >
               {/* Fondo con gradiente y patrón */}
               <div className="absolute inset-0 bg-gradient-to-br from-slate-800/40 via-slate-900/60 to-slate-800/40 rounded-lg"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.1),transparent_50%)]"></div>
               
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6 relative z-10 tracking-wide drop-shadow-lg">Chatbot</h3>
-              <p className="text-cyan-100 text-base sm:text-lg lg:text-xl leading-relaxed relative z-10 font-medium">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 relative z-10 tracking-wide drop-shadow-lg">Chatbot</h3>
+              <p className="text-cyan-100 text-sm sm:text-base lg:text-lg leading-relaxed relative z-10 font-medium">
                 Atiende consultas, manda control semanal de las métricas, agenda citas y responde preguntas en cualquier momento.
               </p>
             </motion.div>
@@ -160,15 +165,15 @@ const AgentsSection = React.memo(() => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
               whileHover={{ scale: 1.02, y: -5 }}
-              className="p-4 sm:p-6 lg:p-8 relative group border-b border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300"
+              className="p-3 sm:p-4 lg:p-5 relative group border-b border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300"
             >
               {/* Fondo con gradiente y patrón */}
               <div className="absolute inset-0 bg-gradient-to-bl from-slate-800/40 via-slate-900/60 to-slate-800/40 rounded-lg"></div>
               <div className="absolute inset-0 bg-gradient-to-bl from-emerald-400/10 via-transparent to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(16,185,129,0.1),transparent_50%)]"></div>
               
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6 relative z-10 tracking-wide drop-shadow-lg">Asistente financiero</h3>
-              <p className="text-cyan-100 text-base sm:text-lg lg:text-xl leading-relaxed relative z-10 font-medium">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 relative z-10 tracking-wide drop-shadow-lg">Asistente financiero</h3>
+              <p className="text-cyan-100 text-sm sm:text-base lg:text-lg leading-relaxed relative z-10 font-medium">
                 Gestiona y recuerda pagos para los clientes. De forma automática. Crea un panel de control para dejar registro de todo.
               </p>
             </motion.div>
@@ -180,15 +185,15 @@ const AgentsSection = React.memo(() => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
               whileHover={{ scale: 1.02, y: -5 }}
-              className="p-4 sm:p-6 lg:p-8 relative group border-r-0 sm:border-r border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300"
+              className="p-3 sm:p-4 lg:p-5 relative group border-r-0 sm:border-r border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300"
             >
               {/* Fondo con gradiente y patrón */}
               <div className="absolute inset-0 bg-gradient-to-tr from-slate-800/40 via-slate-900/60 to-slate-800/40 rounded-lg"></div>
               <div className="absolute inset-0 bg-gradient-to-tr from-purple-400/10 via-transparent to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_80%,rgba(147,51,234,0.1),transparent_50%)]"></div>
               
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6 relative z-10 tracking-wide drop-shadow-lg">Asistente llamada</h3>
-              <p className="text-cyan-100 text-base sm:text-lg lg:text-xl leading-relaxed relative z-10 font-medium">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 relative z-10 tracking-wide drop-shadow-lg">Asistente llamada</h3>
+              <p className="text-cyan-100 text-sm sm:text-base lg:text-lg leading-relaxed relative z-10 font-medium">
                 Asistente telefónico que confirma citas, responde dudas simples y deriva llamadas según la necesidad. Activo 24/7.
               </p>
             </motion.div>
@@ -200,17 +205,79 @@ const AgentsSection = React.memo(() => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
               whileHover={{ scale: 1.02, y: -5 }}
-              className="p-4 sm:p-6 lg:p-8 relative group hover:border-cyan-400/60 transition-all duration-300"
+              className="p-3 sm:p-4 lg:p-5 relative group hover:border-cyan-400/60 transition-all duration-300"
             >
               {/* Fondo con gradiente y patrón */}
               <div className="absolute inset-0 bg-gradient-to-tl from-slate-800/40 via-slate-900/60 to-slate-800/40 rounded-lg"></div>
               <div className="absolute inset-0 bg-gradient-to-tl from-orange-400/10 via-transparent to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(251,146,60,0.1),transparent_50%)]"></div>
               
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6 relative z-10 tracking-wide drop-shadow-lg">Asistente recordatorio</h3>
-              <p className="text-cyan-100 text-base sm:text-lg lg:text-xl leading-relaxed relative z-10 font-medium">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 relative z-10 tracking-wide drop-shadow-lg">Asistente recordatorio</h3>
+              <p className="text-cyan-100 text-sm sm:text-base lg:text-lg leading-relaxed relative z-10 font-medium">
                 Recordatorios automáticos por WhatsApp, SMS o email para reducir ausencias y mantener la agenda organizada.
               </p>
+            </motion.div>
+          </div>
+            </div>
+
+            {/* Sección del video demo */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative"
+            >
+              {/* Contenedor del video con efectos */}
+              <div className="relative group">
+                {/* Efectos de fondo para el video */}
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/20 via-transparent to-blue-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-purple-400/10 via-transparent to-teal-500/10 rounded-2xl"></div>
+                
+                {/* Video container */}
+                <div className="relative bg-slate-900/50 backdrop-blur-sm rounded-2xl p-4 border border-cyan-400/30 group-hover:border-cyan-400/60 transition-all duration-300">
+                  <div className="aspect-video rounded-xl overflow-hidden bg-slate-800/50">
+                    <video
+                      className="w-full h-full object-cover"
+                      controls
+                      preload="metadata"
+                      poster="/placeholder.jpg"
+                    >
+                      <source src="/demo chatbot.mp4" type="video/mp4" />
+                      Tu navegador no soporta el elemento de video.
+                    </video>
+                  </div>
+                  
+                  {/* Overlay con información del video */}
+                  <div className="absolute top-6 left-6 right-6 z-10">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                      <span className="text-white text-sm font-medium">Demo en vivo</span>
+                    </div>
+                    <h3 className="text-white text-lg font-semibold">Chatbot en acción</h3>
+                  </div>
+                  
+                  {/* Efectos de brillo en las esquinas */}
+                  <div className="absolute top-0 left-0 w-8 h-8 bg-gradient-to-br from-cyan-400/30 to-transparent rounded-tl-2xl"></div>
+                  <div className="absolute top-0 right-0 w-8 h-8 bg-gradient-to-bl from-blue-400/30 to-transparent rounded-tr-2xl"></div>
+                  <div className="absolute bottom-0 left-0 w-8 h-8 bg-gradient-to-tr from-teal-400/30 to-transparent rounded-bl-2xl"></div>
+                  <div className="absolute bottom-0 right-0 w-8 h-8 bg-gradient-to-tl from-purple-400/30 to-transparent rounded-br-2xl"></div>
+                </div>
+              </div>
+              
+              {/* Texto descriptivo debajo del video */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="mt-6 text-center lg:text-left"
+              >
+                <h4 className="text-xl font-semibold text-white mb-2">Ve nuestro chatbot en acción</h4>
+                <p className="text-cyan-100 text-sm leading-relaxed">
+                  Descubre cómo nuestros agentes automatizan tu negocio con inteligencia artificial avanzada.
+                </p>
+              </motion.div>
             </motion.div>
           </div>
         </motion.div>
