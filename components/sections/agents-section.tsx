@@ -66,51 +66,123 @@ const AgentsSection = React.memo(() => {
           </h2>
         </motion.div>
 
-        {/* Elegant 2x2 Grid */}
+        {/* Grid 2x2 profesional y tecnológico */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="elegant-grid-2x2 max-w-4xl mx-auto"
+          className="max-w-6xl mx-auto relative"
         >
-          {agents.slice(0, 4).map((agent, index) => (
+          {/* Línea horizontal separadora con efecto glow */}
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent mb-12 opacity-60"></div>
+          
+          {/* Efectos de líneas estáticas tecnológicas */}
+          <div className="absolute inset-0 pointer-events-none">
+            {/* Líneas verticales decorativas */}
+            <div className="absolute left-1/4 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-cyan-300/30 to-transparent"></div>
+            <div className="absolute left-3/4 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-cyan-300/30 to-transparent"></div>
+            <div className="absolute left-1/6 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-blue-400/20 to-transparent"></div>
+            <div className="absolute left-5/6 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-blue-400/20 to-transparent"></div>
+            
+            {/* Líneas horizontales decorativas */}
+            <div className="absolute top-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-300/30 to-transparent"></div>
+            <div className="absolute top-3/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-300/30 to-transparent"></div>
+            <div className="absolute top-1/6 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/20 to-transparent"></div>
+            <div className="absolute top-5/6 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/20 to-transparent"></div>
+            
+            {/* Líneas diagonales sutiles */}
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent transform rotate-12 origin-left"></div>
+            <div className="absolute bottom-0 right-0 w-full h-px bg-gradient-to-l from-transparent via-cyan-400/10 to-transparent transform -rotate-12 origin-right"></div>
+          </div>
+          
+          {/* Grid 2x2 con diseño profesional */}
+          <div className="grid grid-cols-2 gap-0 relative">
+            {/* Línea vertical central con efecto glow */}
+            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-cyan-400 to-transparent transform -translate-x-1/2 opacity-60"></div>
+            {/* Línea horizontal central con efecto glow */}
+            <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent transform -translate-y-1/2 opacity-60"></div>
+            
+            {/* Cuadrante 1: Chatbot */}
             <motion.div
-              key={index}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ scale: 1.02 }}
-              className="elegant-grid-item elegant-hover-lift"
+              transition={{ duration: 0.6, delay: 0.1 }}
+              whileHover={{ scale: 1.02, y: -5 }}
+              className="p-8 relative group border-r border-b border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300"
             >
-              <div className="w-20 h-20 flex items-center justify-center mx-auto text-4xl mb-6">
-                {agent.avatar.includes('.png') || agent.avatar.includes('.jpg') || agent.avatar.includes('.svg') ? (
-                  <Image 
-                    src={agent.avatar} 
-                    alt={agent.name}
-                    width={80}
-                    height={80}
-                    className="object-contain"
-                  />
-                ) : (
-                  agent.avatar
-                )}
-              </div>
+              {/* Fondo con gradiente y patrón */}
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-800/40 via-slate-900/60 to-slate-800/40 rounded-lg"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.1),transparent_50%)]"></div>
               
-              <h3 className="elegant-title text-2xl text-white mb-4">
-                {t(`agents.agent${index + 1}.name`)}
-              </h3>
-              
-              <p className="text-gray-300 text-lg mb-6">
-                {t(`agents.agent${index + 1}.description`)}
+              <h3 className="text-3xl font-semibold text-white mb-4 relative z-10 tracking-wide">Chatbot</h3>
+              <p className="text-cyan-200/80 text-lg leading-relaxed relative z-10 font-light">
+                Atiende consultas, manda control semanal de las métricas, agenda citas y responde preguntas en cualquier momento.
               </p>
-              
-              <button className="elegant-button">
-                Más...
-              </button>
             </motion.div>
-          ))}
+
+            {/* Cuadrante 2: Asistente financiero */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              whileHover={{ scale: 1.02, y: -5 }}
+              className="p-8 relative group border-b border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300"
+            >
+              {/* Fondo con gradiente y patrón */}
+              <div className="absolute inset-0 bg-gradient-to-bl from-slate-800/40 via-slate-900/60 to-slate-800/40 rounded-lg"></div>
+              <div className="absolute inset-0 bg-gradient-to-bl from-emerald-400/10 via-transparent to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(16,185,129,0.1),transparent_50%)]"></div>
+              
+              <h3 className="text-3xl font-semibold text-white mb-4 relative z-10 tracking-wide">Asistente financiero</h3>
+              <p className="text-cyan-200/80 text-lg leading-relaxed relative z-10 font-light">
+                Gestiona y recuerda pagos para los clientes. De forma automática. Crea un panel de control para dejar registro de todo.
+              </p>
+            </motion.div>
+
+            {/* Cuadrante 3: Asistente llamada */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              whileHover={{ scale: 1.02, y: -5 }}
+              className="p-8 relative group border-r border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300"
+            >
+              {/* Fondo con gradiente y patrón */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-slate-800/40 via-slate-900/60 to-slate-800/40 rounded-lg"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-purple-400/10 via-transparent to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_80%,rgba(147,51,234,0.1),transparent_50%)]"></div>
+              
+              <h3 className="text-3xl font-semibold text-white mb-4 relative z-10 tracking-wide">Asistente llamada</h3>
+              <p className="text-cyan-200/80 text-lg leading-relaxed relative z-10 font-light">
+                Asistente telefónico que confirma citas, responde dudas simples y deriva llamadas según la necesidad. Activo 24/7.
+              </p>
+            </motion.div>
+
+            {/* Cuadrante 4: Asistente recordatorio */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              whileHover={{ scale: 1.02, y: -5 }}
+              className="p-8 relative group hover:border-cyan-400/60 transition-all duration-300"
+            >
+              {/* Fondo con gradiente y patrón */}
+              <div className="absolute inset-0 bg-gradient-to-tl from-slate-800/40 via-slate-900/60 to-slate-800/40 rounded-lg"></div>
+              <div className="absolute inset-0 bg-gradient-to-tl from-orange-400/10 via-transparent to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(251,146,60,0.1),transparent_50%)]"></div>
+              
+              <h3 className="text-3xl font-semibold text-white mb-4 relative z-10 tracking-wide">Asistente recordatorio</h3>
+              <p className="text-cyan-200/80 text-lg leading-relaxed relative z-10 font-light">
+                Recordatorios automáticos por WhatsApp, SMS o email para reducir ausencias y mantener la agenda organizada.
+              </p>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>
