@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { Card } from '@/components/ui/card'
 import { Brain, Zap, Target, TrendingUp, Shield, Rocket } from 'lucide-react'
 import { useTranslations } from '@/hooks/use-translations'
@@ -84,22 +85,27 @@ export const FeaturesAnimated = () => {
   }
 
   return (
-    <section className="relative overflow-hidden min-h-screen">
-      {/* Fondo personalizado invertido responsive */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: 'url(/fondo33.webp)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          transform: 'scaleY(-1)',
-        }}
-      />
+    <section 
+      className="relative overflow-hidden min-h-screen"
+      role="region"
+      aria-label="Características revolucionarias"
+    >
+      {/* Fondo personalizado invertido responsive - Optimized with next/image */}
+      <div className="absolute inset-0" style={{ transform: 'scaleY(-1)' }} aria-hidden="true">
+        <Image
+          src="/fondo33.webp"
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+          quality={85}
+        />
+      </div>
       {/* Overlay para mejorar legibilidad */}
-      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="absolute inset-0 bg-black/20" aria-hidden="true"></div>
       
       {/* Efectos de líneas estáticas tecnológicas - Responsive */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         {/* Líneas verticales decorativas - Más sutiles en móvil */}
         <div className="absolute left-1/4 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-cyan-300/20 sm:via-cyan-300/30 to-transparent"></div>
         <div className="absolute left-3/4 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-cyan-300/20 sm:via-cyan-300/30 to-transparent"></div>
@@ -147,9 +153,11 @@ export const FeaturesAnimated = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
+          role="list"
+          aria-label="Lista de características"
         >
           {features.map((feature, index) => (
-            <motion.div key={index} variants={itemVariants}>
+            <motion.div key={index} variants={itemVariants} role="listitem">
               <motion.div
                 whileHover={{
                   scale: 1.05,
@@ -158,25 +166,29 @@ export const FeaturesAnimated = () => {
                 }}
                 className="h-full"
               >
-                <Card className="relative bg-gradient-to-br from-slate-800/60 via-slate-900/80 to-slate-800/60 border border-gray-700/30 p-4 sm:p-6 overflow-hidden group hover:border-cyan-400/50 transition-all duration-300 h-full backdrop-blur-sm hover:shadow-lg hover:shadow-cyan-500/20">
+                <Card 
+                  className="relative bg-gradient-to-br from-slate-800/60 via-slate-900/80 to-slate-800/60 border border-gray-700/30 p-4 sm:p-6 overflow-hidden group hover:border-cyan-400/50 transition-all duration-300 h-full backdrop-blur-sm hover:shadow-lg hover:shadow-cyan-500/20"
+                  role="article"
+                  aria-labelledby={`feature-${index}-title`}
+                >
                   {/* Gradient Background dinámico */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
+                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} aria-hidden="true" />
                   
                   {/* Patrón radial sutil */}
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.1),transparent_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.1),transparent_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
 
                   {/* Contenido */}
                   <div className="relative z-10">
                     {/* Header con icono y título */}
                     <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                      <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`} aria-hidden="true">
                         <feature.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-lg sm:text-xl font-bold text-white mb-1">
+                        <h3 id={`feature-${index}-title`} className="text-lg sm:text-xl font-bold text-white mb-1">
                           {feature.title}
                         </h3>
-                        <div className={`px-2 sm:px-3 py-1 bg-gradient-to-r ${feature.color} rounded-full text-white text-xs sm:text-sm font-semibold inline-block`}>
+                        <div className={`px-2 sm:px-3 py-1 bg-gradient-to-r ${feature.color} rounded-full text-white text-xs sm:text-sm font-semibold inline-block`} aria-label={`Estadística: ${feature.stats}`}>
                           {feature.stats}
                         </div>
                       </div>

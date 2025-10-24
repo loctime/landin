@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { Card } from '@/components/ui/card'
 import { Target, Lightbulb, Users } from 'lucide-react'
 import { useTranslations } from '@/hooks/use-translations'
@@ -10,13 +11,18 @@ const AboutSection = React.memo(() => {
   const { t } = useTranslations()
   return (
     <section id="sobre-nosotros" className="py-16 sm:py-24 relative overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: 'url(/fondo44.webp)',
-        }}
-      />
+      {/* Background Image - Optimized with next/image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/fondo44.webp"
+          alt="Background pattern"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+          quality={85}
+        />
+      </div>
       
       {/* Tech Grid Lines - Comentado para mostrar la imagen de fondo */}
       {/* <div className="absolute inset-0 elegant-grid opacity-30"></div> */}

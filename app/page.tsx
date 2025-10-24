@@ -5,34 +5,59 @@ import {
   Navigation,
   HeroSection,
   StatsSection,
-  ProcessSection,
-  AgentsSection,
   AboutSection,
   PricingBanner,
-  TestimonialsSection,
   FAQSection,
   UrgencySection,
   Footer,
-  FeaturesAnimated,
 } from '@/components/sections'
+import {
+  LazySection,
+  LazyProcessSectionWithSkeleton,
+  LazyFeaturesAnimatedWithSkeleton,
+  LazyTestimonialsSectionWithSkeleton,
+  LazyAgentsSectionWithSkeleton,
+  ErrorBoundary,
+} from '@/components/common'
 
 export default function HomePage() {
   useScrollAnimation()
 
   return (
     <div className="min-h-screen elegant-gradient">
-      <Navigation />
-      <HeroSection />
-      <StatsSection />
-      <AgentsSection />
-      <ProcessSection />
-      <FeaturesAnimated />
-      <AboutSection />
-      <PricingBanner />
-      <TestimonialsSection />
-      <FAQSection />
-      <UrgencySection />
-      <Footer />
+      <ErrorBoundary>
+        <Navigation />
+        <HeroSection />
+        <StatsSection />
+      </ErrorBoundary>
+      
+      {/* Lazy load heavy sections for better performance with specific skeleton loaders */}
+      <ErrorBoundary>
+        <LazyAgentsSectionWithSkeleton />
+      </ErrorBoundary>
+      
+      <ErrorBoundary>
+        <LazyProcessSectionWithSkeleton />
+      </ErrorBoundary>
+      
+      <ErrorBoundary>
+        <LazyFeaturesAnimatedWithSkeleton />
+      </ErrorBoundary>
+      
+      <ErrorBoundary>
+        <AboutSection />
+        <PricingBanner />
+      </ErrorBoundary>
+      
+      <ErrorBoundary>
+        <LazyTestimonialsSectionWithSkeleton />
+      </ErrorBoundary>
+      
+      <ErrorBoundary>
+        <FAQSection />
+        <UrgencySection />
+        <Footer />
+      </ErrorBoundary>
     </div>
   )
 }

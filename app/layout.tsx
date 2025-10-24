@@ -30,6 +30,20 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'es_ES',
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code',
+  },
 }
 
 export default function RootLayout({
@@ -38,10 +52,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html>
+    <html lang="es">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${playfairDisplay.variable} ${inter.variable}`}>
         <LanguageProvider>
-          {children}
+          <main id="main-content" role="main">
+            {children}
+          </main>
         </LanguageProvider>
         <Analytics />
       </body>
