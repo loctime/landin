@@ -20,7 +20,7 @@ export default function HomePage() {
   useScrollAnimation()
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen elegant-gradient">
       <Navigation />
       <HeroSection />
       <StatsSection />

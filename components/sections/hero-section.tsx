@@ -12,85 +12,61 @@ const HeroSection = React.memo(() => {
   const { t } = useTranslations()
 
   return (
-    <section className="min-h-screen bg-black flex items-center justify-center relative overflow-hidden">
-      {/* Video de fondo */}
-      <div className="absolute inset-0 flex items-end justify-center overflow-hidden">
-        <video 
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          className="w-auto h-[85%] object-contain opacity-65"
-          style={{ 
-            filter: 'brightness(1.4) contrast(1.2) saturate(1.4)',
-            objectPosition: 'center bottom'
-          }}
-        >
-          <source src="/robotaso.mp4" type="video/mp4" />
-          {/* Fallback para navegadores que no soporten video */}
-          Tu navegador no soporta videos HTML5.
-        </video>
-        {/* Overlay oscuro para mejor legibilidad */}
-        <div className="absolute inset-0 bg-black/20" />
-      </div>
-
-      {/* Efectos de fondo adicionales */}
+    <section className="min-h-screen elegant-gradient flex items-center justify-center relative overflow-hidden">
+      {/* Elegant Background Effects */}
+      <div className="absolute inset-0 elegant-grid opacity-30"></div>
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-opptim-green/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-opptim-turquoise/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-36D6E6/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-45C789/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center relative z-20 mt-32 sm:mt-40">
-        <div className="scroll-animate opacity-0 translate-y-8">
-          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-white mb-4 sm:mb-6 text-balance">
+      <div className="elegant-container text-center relative z-20">
+        <div className="elegant-fade-in">
+          <h1 className="elegant-title text-4xl sm:text-6xl md:text-8xl text-white mb-6 sm:mb-8">
             {t('hero.title')}
           </h1>
 
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-6 sm:mb-8 max-w-3xl mx-auto text-pretty px-4">
+          <p className="elegant-subtitle text-xl sm:text-2xl md:text-3xl text-gray-300 mb-8 sm:mb-12 max-w-4xl mx-auto">
             {t('hero.subtitle')}
           </p>
 
-          <div className="flex flex-wrap justify-center gap-6 sm:gap-8 mb-8 sm:mb-12 text-sm sm:text-base">
+          <div className="flex flex-wrap justify-center gap-8 sm:gap-12 mb-12 sm:mb-16 text-base sm:text-lg">
             <div className="flex items-center text-gray-300">
-              <div className="w-2 h-2 bg-opptim-green rounded-full mr-2"></div>
+              <div className="w-3 h-3 bg-36D6E6 rounded-full mr-3"></div>
               {t('hero.features.personalized')}
             </div>
             <div className="flex items-center text-gray-300">
-              <div className="w-2 h-2 bg-opptim-turquoise rounded-full mr-2"></div>
+              <div className="w-3 h-3 bg-45C789 rounded-full mr-3"></div>
               {t('hero.features.availability')}
             </div>
             <div className="flex items-center text-gray-300">
-              <div className="w-2 h-2 bg-opptim-blue rounded-full mr-2"></div>
+              <div className="w-3 h-3 bg-367DE6 rounded-full mr-3"></div>
               {t('hero.features.guaranteed')}
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
-            <Button 
-              size="lg" 
-              className="bg-opptim-green hover:bg-opptim-green/90 active:bg-opptim-green/80 text-black font-medium px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg w-full sm:w-auto touch-target"
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+            <button 
+              className="elegant-button text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-6 w-full sm:w-auto"
               onClick={() => window.open('https://wa.me/34633572877', '_blank')}
             >
               💬 {t('hero.cta')}
-              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-opptim-turquoise/30 text-opptim-turquoise hover:bg-opptim-turquoise/10 active:bg-opptim-turquoise/20 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg bg-transparent w-full sm:w-auto touch-target"
+              <ArrowRight className="w-5 h-5 ml-3" />
+            </button>
+            <button
+              className="elegant-button-outline text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-6 w-full sm:w-auto"
               onClick={() => setIsVideoOpen(true)}
             >
-              <Play className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+              <Play className="w-5 h-5 mr-3" />
               {t('hero.secondaryCta')}
-            </Button>
+            </button>
           </div>
         </div>
       </div>
 
       {/* Video Modal */}
       <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
-        <DialogContent className="max-w-4xl bg-gray-900 border-opptim-green/30">
+        <DialogContent className="max-w-4xl elegant-card">
           <video 
             controls 
             autoPlay

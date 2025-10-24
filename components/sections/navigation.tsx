@@ -15,9 +15,9 @@ const Navigation = React.memo(() => {
   const { isScrollingDown, isAtTop } = useScroll()
 
   return (
-    <nav className="fixed top-0 w-full z-50 backdrop-blur-lg border-b border-gray-500/20 shadow-2xl transition-all duration-300 ease-in-out">
-      <div className={`max-w-7xl mx-auto px-4 sm:px-6 transition-all duration-300 ease-in-out ${
-        isScrollingDown && !isAtTop ? 'py-1' : 'py-4'
+    <nav className="elegant-nav fixed top-0 w-full z-50 transition-all duration-300 ease-in-out">
+      <div className={`elegant-container transition-all duration-300 ease-in-out ${
+        isScrollingDown && !isAtTop ? 'py-2' : 'py-4'
       }`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
@@ -27,116 +27,110 @@ const Navigation = React.memo(() => {
                 e.preventDefault()
                 window.scrollTo({ top: 0, behavior: 'smooth' })
               }}
-              className="cursor-pointer shadow-2xl hover:shadow-3xl transition-all duration-300 rounded-lg p-2"
+              className="cursor-pointer transition-all duration-300"
             >
-              <Image 
-                src="/opptim2png.png" 
-                alt="Opptim.Ai Logo" 
-                width={200} 
-                height={50}
-                className={`w-auto brightness-125 hover:brightness-200 hover:scale-105 transition-all duration-300 ${
-                  isScrollingDown && !isAtTop ? 'h-10' : 'h-12'
-                }`}
-                priority
-              />
+              <div className="elegant-title text-2xl">
+                <span className="text-white">Opptim</span>
+                <span className="elegant-text-gradient">.Ai</span>
+              </div>
             </a>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <a href="#servicios" className="text-gray-300 hover:text-opptim-green transition-colors">
+            <a href="#servicios" className="text-gray-300 hover:text-36D6E6 transition-colors duration-300 relative group">
               {t('nav.services')}
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-36D6E6 transition-all duration-300 group-hover:w-full"></div>
             </a>
-            <a href="#sobre-nosotros" className="text-gray-300 hover:text-opptim-green transition-colors">
+            <a href="#sobre-nosotros" className="text-gray-300 hover:text-36D6E6 transition-colors duration-300 relative group">
               {t('nav.about')}
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-36D6E6 transition-all duration-300 group-hover:w-full"></div>
             </a>
-            <a href="#testimonios" className="text-gray-300 hover:text-opptim-green transition-colors">
+            <a href="#testimonios" className="text-gray-300 hover:text-36D6E6 transition-colors duration-300 relative group">
               {t('nav.testimonials')}
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-36D6E6 transition-all duration-300 group-hover:w-full"></div>
             </a>
-            <a href="#faq" className="text-gray-300 hover:text-opptim-green transition-colors">
+            <a href="#faq" className="text-gray-300 hover:text-36D6E6 transition-colors duration-300 relative group">
               {t('nav.faq')}
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-36D6E6 transition-all duration-300 group-hover:w-full"></div>
             </a>
           </div>
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <Badge 
-              variant="outline" 
-              className="border-opptim-green/30 text-opptim-green cursor-pointer hover:bg-opptim-green/10 transition-colors"
+            <button 
+              className="elegant-button-outline flex items-center gap-2"
               onClick={toggleLanguage}
             >
-              <Globe className="w-3 h-3 mr-1" />
+              <Globe className="w-4 h-4" />
               {language.toUpperCase()}
-            </Badge>
-            <Button 
-              className="bg-opptim-green hover:bg-opptim-green/90 text-black font-medium"
+            </button>
+            <button 
+              className="elegant-button flex items-center gap-2"
               onClick={() => window.open('https://wa.me/34633572877', '_blank')}
             >
               {t('nav.contact')}
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
+              <ArrowRight className="w-4 h-4" />
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-2">
-            <Badge 
-              variant="outline" 
-              className="border-opptim-green/30 text-opptim-green text-xs cursor-pointer hover:bg-opptim-green/10 transition-colors"
+            <button 
+              className="elegant-button-outline text-xs px-3 py-1.5 flex items-center gap-1"
               onClick={toggleLanguage}
             >
-              <Globe className="w-3 h-3 mr-1" />
+              <Globe className="w-3 h-3" />
               {language.toUpperCase()}
-            </Badge>
-            <Button
-              variant="ghost"
-              size="sm"
+            </button>
+            <button
               onClick={toggleMenu}
-              className="text-white hover:text-opptim-green hover:bg-opptim-green/10"
+              className="text-white hover:text-36D6E6 transition-colors p-2"
             >
               {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </Button>
+            </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 py-4 border-t border-opptim-green/20">
+          <div className="md:hidden mt-4 py-4 border-t border-36D6E6/20">
             <div className="flex flex-col space-y-4">
               <a 
                 href="#servicios" 
-                className="text-gray-300 hover:text-opptim-green transition-colors py-2"
+                className="text-gray-300 hover:text-36D6E6 transition-colors py-2"
                 onClick={closeMenu}
               >
                 {t('nav.services')}
               </a>
               <a 
                 href="#sobre-nosotros" 
-                className="text-gray-300 hover:text-opptim-green transition-colors py-2"
+                className="text-gray-300 hover:text-36D6E6 transition-colors py-2"
                 onClick={closeMenu}
               >
                 {t('nav.about')}
               </a>
               <a 
                 href="#testimonios" 
-                className="text-gray-300 hover:text-opptim-green transition-colors py-2"
+                className="text-gray-300 hover:text-36D6E6 transition-colors py-2"
                 onClick={closeMenu}
               >
                 {t('nav.testimonials')}
               </a>
               <a 
                 href="#faq" 
-                className="text-gray-300 hover:text-opptim-green transition-colors py-2"
+                className="text-gray-300 hover:text-36D6E6 transition-colors py-2"
                 onClick={closeMenu}
               >
                 {t('nav.faq')}
               </a>
-              <Button 
-                className="bg-opptim-green hover:bg-opptim-green/90 text-black font-medium w-full mt-4"
+              <button 
+                className="elegant-button w-full mt-4 flex items-center justify-center gap-2"
                 onClick={() => window.open('https://wa.me/34633572877', '_blank')}
               >
                 {t('nav.contact')}
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
+                <ArrowRight className="w-4 h-4" />
+              </button>
             </div>
           </div>
         )}

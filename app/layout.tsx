@@ -3,7 +3,20 @@ import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Analytics } from '@vercel/analytics/next'
 import { LanguageProvider } from '@/contexts/language-context'
+import { Playfair_Display, Inter } from 'next/font/google'
 import './globals.css'
+
+const playfairDisplay = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+  display: 'swap',
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Opptim.Ai - Ahorra tiempo y dinero con agentes de IA',
@@ -26,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${playfairDisplay.variable} ${inter.variable}`}>
         <LanguageProvider>
           {children}
         </LanguageProvider>
