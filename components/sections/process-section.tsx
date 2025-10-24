@@ -55,7 +55,6 @@ const ProcessSection = React.memo(() => {
           backgroundImage: 'url(/fondo33.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
         }}
       />
       {/* Overlay para mejorar legibilidad */}

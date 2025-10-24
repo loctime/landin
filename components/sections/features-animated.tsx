@@ -92,7 +92,6 @@ export const FeaturesAnimated = () => {
           backgroundImage: 'url(/fondo33.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
           transform: 'scaleY(-1)',
         }}
       />
