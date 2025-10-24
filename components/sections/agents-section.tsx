@@ -33,7 +33,7 @@ const AgentsSection = React.memo(() => {
   }
 
   return (
-    <section id="servicios" className="py-16 sm:py-24 bg-black relative overflow-hidden">
+    <section id="servicios" className="py-8 sm:py-12 bg-black relative overflow-hidden">
       {/* Efectos de fondo animados */}
       <motion.div
         animate={{
