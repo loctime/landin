@@ -4,56 +4,58 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Card } from '@/components/ui/card'
 import { Brain, Zap, Target, TrendingUp, Shield, Rocket } from 'lucide-react'
+import { useTranslations } from '@/hooks/use-translations'
 
 export const FeaturesAnimated = () => {
+  const { t } = useTranslations()
   const features = [
     {
       icon: Brain,
-      title: "IA Inteligente",
-      description: "Algoritmos de última generación que aprenden de cada interacción",
+      title: t('features.animated.feature1.title'),
+      description: t('features.animated.feature1.description'),
       color: "from-purple-500 to-pink-500",
       stats: "99.9%",
-      label: "Precisión"
+      label: t('features.animated.feature1.label')
     },
     {
       icon: Zap,
-      title: "Ultra Rápido",
-      description: "Respuestas en milisegundos para una experiencia fluida",
+      title: t('features.animated.feature2.title'),
+      description: t('features.animated.feature2.description'),
       color: "from-yellow-500 to-orange-500",
       stats: "<100ms",
-      label: "Respuesta"
+      label: t('features.animated.feature2.label')
     },
     {
       icon: Target,
-      title: "Personalizado",
-      description: "Adaptado específicamente a las necesidades de tu negocio",
+      title: t('features.animated.feature3.title'),
+      description: t('features.animated.feature3.description'),
       color: "from-blue-500 to-cyan-500",
       stats: "100%",
-      label: "Adaptable"
+      label: t('features.animated.feature3.label')
     },
     {
       icon: TrendingUp,
-      title: "Escalable",
-      description: "Crece con tu empresa sin límites de capacidad",
+      title: t('features.animated.feature4.title'),
+      description: t('features.animated.feature4.description'),
       color: "from-green-500 to-emerald-500",
       stats: "∞",
-      label: "Ilimitado"
+      label: t('features.animated.feature4.label')
     },
     {
       icon: Shield,
-      title: "Seguro",
-      description: "Máxima protección de datos con encriptación de nivel militar",
+      title: t('features.animated.feature5.title'),
+      description: t('features.animated.feature5.description'),
       color: "from-red-500 to-rose-500",
       stats: "256-bit",
-      label: "Encriptación"
+      label: t('features.animated.feature5.label')
     },
     {
       icon: Rocket,
-      title: "Innovador",
-      description: "Tecnología de vanguardia actualizada constantemente",
+      title: t('features.animated.feature6.title'),
+      description: t('features.animated.feature6.description'),
       color: "from-indigo-500 to-purple-500",
       stats: "24/7",
-      label: "Actualización"
+      label: t('features.animated.feature6.label')
     }
   ]
 
@@ -92,13 +94,10 @@ export const FeaturesAnimated = () => {
           className="text-center mb-6"
         >
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
-            Características{' '}
-            <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-              Revolucionarias
-            </span>
+            {t('features.animated.title')}
           </h2>
           <p className="text-gray-400 text-sm max-w-2xl mx-auto">
-            Tecnología de punta diseñada para transformar tu negocio
+            {t('features.animated.subtitle')}
           </p>
         </motion.div>
 
@@ -154,7 +153,7 @@ export const FeaturesAnimated = () => {
         {/* Indicador simplificado al final */}
         <div className="text-center mt-4">
           <div className="inline-flex items-center gap-2 text-emerald-400 font-medium text-sm">
-            <span>Y mucho más</span>
+            <span>{t('features.animated.more')}</span>
             <Rocket className="w-4 h-4" />
           </div>
         </div>

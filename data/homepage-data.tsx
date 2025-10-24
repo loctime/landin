@@ -41,6 +41,7 @@ export const processSteps: ProcessStep[] = [
     icon: Search,
     title: "IDENTIFICAR",
     description: "Detectar ineficiencias, puntos de fricción y potencial de automatización",
+    key: "identify",
     visual: (
       <div className="w-full h-32 bg-gray-900 rounded-lg border border-emerald-500/30 flex items-center justify-center">
         <div className="w-16 h-16 border-2 border-emerald-500 rounded-full flex items-center justify-center animate-pulse">
@@ -53,6 +54,7 @@ export const processSteps: ProcessStep[] = [
     icon: Code,
     title: "DISEÑAR",
     description: "Arquitectura de procesos impulsados por IA adaptados a tu stack",
+    key: "design",
     visual: (
       <div className="w-full h-32 bg-gray-900 rounded-lg border border-emerald-500/30 p-4 font-mono text-xs">
         <div className="text-emerald-400">
@@ -71,6 +73,7 @@ export const processSteps: ProcessStep[] = [
     icon: Zap,
     title: "AUTOMATIZAR",
     description: "Entregar e integrar la automatización en tu flujo de trabajo",
+    key: "automate",
     visual: (
       <div className="w-full h-32 bg-gray-900 rounded-lg border border-emerald-500/30 flex items-center justify-around p-4">
         <div className="flex flex-col items-center">
@@ -93,10 +96,10 @@ export const processSteps: ProcessStep[] = [
 ]
 
 export const benefits: Benefit[] = [
-  { icon: Users, title: "Integración de Sistemas" },
-  { icon: BarChart3, title: "Decisiones Basadas en Datos" },
-  { icon: Clock, title: "Productividad Mejorada" },
-  { icon: Zap, title: "Disponibilidad 24/7" },
+  { icon: Users, title: "Integración de Sistemas", key: "integration" },
+  { icon: BarChart3, title: "Decisiones Basadas en Datos", key: "data" },
+  { icon: Clock, title: "Productividad Mejorada", key: "productivity" },
+  { icon: Zap, title: "Disponibilidad 24/7", key: "availability" },
 ]
 
 export const stats: Stat[] = [
@@ -135,21 +138,25 @@ export const faqs: FAQ[] = [
     question: "¿Qué es una automatización con inteligencia artificial?",
     answer:
       "Las automatizaciones con IA son sistemas que permiten ejecutar tareas repetitivas o de atención al cliente de forma automática, utilizando algoritmos inteligentes. Por ejemplo, respuestas automáticas en WhatsApp, gestión de citas, recordatorios o segmentación de pacientes. Todo funciona en piloto automático, ahorrando tiempo y recursos a tu equipo.",
+    key: "q1",
   },
   {
     question: "¿Qué beneficios obtiene mi negocio al automatizar procesos?",
     answer:
       "Automatizar te permite ahorrar tiempo, reducir errores humanos, mejorar la atención al cliente y aumentar tus ventas. Además, la IA aprende con el tiempo, lo que hace que tus procesos sean cada vez más eficientes. En pocas semanas, notarás que tu equipo trabaja menos en tareas manuales y más en lo que realmente genera valor.",
+    key: "q2",
   },
   {
     question: "¿Se pueden integrar las automatizaciones con mis herramientas actuales (WhatsApp, redes sociales, etc.)?",
     answer:
       "¡Sí! Nuestras automatizaciones se integran fácilmente con plataformas como WhatsApp Business, Google Calendar, HubSpot, Notion, Facebook, Instagram, entre otras. Nos adaptamos a tu flujo de trabajo para que no tengas que cambiar nada, solo mejorar lo que ya haces.",
+    key: "q3",
   },
   {
     question: "¿Necesito conocimientos técnicos para usar las automatizaciones?",
     answer:
       "No. Nuestro equipo se encarga de todo: configuración, implementación y mantenimiento. Tú solo verás los resultados funcionando. Además, te damos una capacitación breve para que puedas entender y controlar tus sistemas sin complicaciones.",
+    key: "q4",
   },
 ]
 
@@ -157,23 +164,26 @@ export const footerSections: FooterSection[] = [
   {
     title: "Navegación",
     links: ["Servicios", "Sobre Nosotros", "Testimonios", "FAQ"],
+    key: "navigation",
   },
   {
     title: "Legal",
     links: ["Privacidad", "Términos", "Cookies"],
+    key: "legal",
   },
   {
     title: "Síguenos",
     links: ["Instagram", "LinkedIn", "WhatsApp"],
+    key: "follow",
   },
 ]
 
 export const companyLogos = [
-  "Clínicas Dentales",
-  "Centros Médicos", 
-  "Consultas Privadas",
-  "Centros Estéticos",
-  "Fisioterapia"
+  { key: "dental", label: "Clínicas Dentales" },
+  { key: "medical", label: "Centros Médicos" },
+  { key: "private", label: "Consultas Privadas" },
+  { key: "aesthetic", label: "Centros Estéticos" },
+  { key: "physio", label: "Fisioterapia" }
 ]
 
 export const contactInfo = {

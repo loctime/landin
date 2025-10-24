@@ -44,15 +44,32 @@ const Footer = React.memo(() => {
 
           {footerSections.map((section, index) => (
             <div key={index}>
-              <h4 className="text-white font-semibold mb-4">{section.title}</h4>
+              <h4 className="text-white font-semibold mb-4">
+                {section.key ? t(`footer.sections.${section.key}.title`) : section.title}
+              </h4>
               <ul className="space-y-2">
-                {section.links.map((link, linkIndex) => (
-                  <li key={linkIndex}>
-                    <a href="#" className="text-gray-400 hover:text-opptim-green transition-colors text-sm">
-                      {link}
-                    </a>
-                  </li>
-                ))}
+                {section.links.map((link, linkIndex) => {
+                  // Mapeo específico para cada sección
+                  let linkKey = ''
+                  if (section.key === 'navigation') {
+                    const navKeys = ['services', 'about', 'testimonials', 'faq']
+                    linkKey = navKeys[linkIndex] || ''
+                  } else if (section.key === 'legal') {
+                    const legalKeys = ['privacy', 'terms', 'cookies']
+                    linkKey = legalKeys[linkIndex] || ''
+                  } else if (section.key === 'follow') {
+                    const followKeys = ['instagram', 'linkedin', 'whatsapp']
+                    linkKey = followKeys[linkIndex] || ''
+                  }
+                  
+                  return (
+                    <li key={linkIndex}>
+                      <a href="#" className="text-gray-400 hover:text-opptim-green transition-colors text-sm">
+                        {section.key && linkKey ? t(`footer.sections.${section.key}.links.${linkKey}`) : link}
+                      </a>
+                    </li>
+                  )
+                })}
               </ul>
             </div>
           ))}

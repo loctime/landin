@@ -6,8 +6,10 @@ import { motion } from 'framer-motion'
 import { SpotlightCard } from '@/components/ui/spotlight-card'
 import { agents, companyLogos } from '@/data/homepage-data'
 import { Sparkles, Zap } from 'lucide-react'
+import { useTranslations } from '@/hooks/use-translations'
 
 const AgentsSection = React.memo(() => {
+  const { t } = useTranslations()
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -55,14 +57,14 @@ const AgentsSection = React.memo(() => {
             className="inline-flex items-center gap-2 bg-opptim-green/10 border border-opptim-green/30 px-4 py-2 rounded-full mb-6"
           >
             <Zap className="w-4 h-4 text-opptim-green" />
-            <span className="text-opptim-green text-sm font-medium">Powered by AI</span>
+            <span className="text-opptim-green text-sm font-medium">{t('agents.poweredBy')}</span>
           </motion.div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
-            Nuestros <span className="text-opptim-green">servicios</span> de IA
+            {t('agents.title')}
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Soluciones de automatización inteligente para optimizar tu negocio
+            {t('agents.subtitle')}
           </p>
         </motion.div>
 
@@ -81,7 +83,7 @@ const AgentsSection = React.memo(() => {
             transition={{ duration: 0.5 }}
             className="text-gray-500 text-sm font-medium"
           >
-            Sectores que confían en nosotros:
+            {t('agents.sectors')}
           </motion.div>
           <motion.div
             variants={containerVariants}
@@ -98,7 +100,7 @@ const AgentsSection = React.memo(() => {
                 whileHover={{ scale: 1.08, y: -3 }}
                 className="bg-gray-800/50 backdrop-blur-sm px-4 py-2 rounded-lg text-gray-300 text-sm font-medium border border-opptim-green/20 hover:border-opptim-green/50 transition-colors cursor-pointer"
               >
-                {logo}
+                {t(`agents.sectorsList.${logo.key}`)}
               </motion.div>
             ))}
           </motion.div>
@@ -140,7 +142,7 @@ const AgentsSection = React.memo(() => {
                     >
                       <div className="bg-gradient-to-r from-opptim-green to-emerald-400 text-black px-2.5 py-1 rounded-full text-xs font-bold flex items-center gap-1 shadow-lg shadow-opptim-green/50">
                         <Sparkles className="w-3 h-3" />
-                        Popular
+                        {t('agents.popular')}
                       </div>
                     </motion.div>
                   )}
@@ -180,7 +182,7 @@ const AgentsSection = React.memo(() => {
                       transition={{ delay: 0.2 }}
                       className="text-lg sm:text-xl font-bold text-white mb-2"
                     >
-                      {agent.name}
+                      {t(`agents.agent${index + 1}.name`)}
                     </motion.h3>
                     
                     <motion.p
@@ -191,7 +193,7 @@ const AgentsSection = React.memo(() => {
                       whileHover={{ scale: 1.05, color: "#10b981" }}
                       className="text-opptim-green text-sm font-medium mb-3"
                     >
-                      {agent.specialty}
+                      {t(`agents.agent${index + 1}.specialty`)}
                     </motion.p>
                     
                     <motion.p
@@ -201,7 +203,7 @@ const AgentsSection = React.memo(() => {
                       transition={{ delay: 0.4 }}
                       className="text-gray-400 text-xs leading-relaxed"
                     >
-                      {agent.description}
+                      {t(`agents.agent${index + 1}.description`)}
                     </motion.p>
                   </motion.div>
 

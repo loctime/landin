@@ -104,9 +104,9 @@ const ProcessSection = React.memo(() => {
                     </motion.div>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">IDENTIFICAR</h3>
+                <h3 className="text-xl font-bold text-white mb-4">{t('process.steps.identify.title')}</h3>
                 <p className="text-gray-400 text-pretty">
-                  Detectar ineficiencias, puntos de fricción y potencial de automatización
+                  {t('process.steps.identify.description')}
                 </p>
               </Card>
             </motion.div>
@@ -176,9 +176,9 @@ const ProcessSection = React.memo(() => {
                     />
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">DISEÑAR</h3>
+                <h3 className="text-xl font-bold text-white mb-4">{t('process.steps.design.title')}</h3>
                 <p className="text-gray-400 text-pretty">
-                  Arquitectura de procesos impulsados por IA adaptados a tu stack
+                  {t('process.steps.design.description')}
                 </p>
               </Card>
             </motion.div>
@@ -255,9 +255,9 @@ const ProcessSection = React.memo(() => {
                     </motion.div>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">AUTOMATIZAR</h3>
+                <h3 className="text-xl font-bold text-white mb-4">{t('process.steps.automate.title')}</h3>
                 <p className="text-gray-400 text-pretty">
-                  Entregar e integrar la automatización en tu flujo de trabajo
+                  {t('process.steps.automate.description')}
                 </p>
               </Card>
             </motion.div>
@@ -284,7 +284,7 @@ const ProcessSection = React.memo(() => {
                   >
                     <benefit.icon className="w-8 h-8 text-emerald-400 mx-auto mb-3" />
                   </motion.div>
-                  <h4 className="text-white font-medium text-sm">{benefit.title}</h4>
+                  <h4 className="text-white font-medium text-sm">{benefit.key ? t(`process.benefits.${benefit.key}`) : benefit.title}</h4>
                 </Card>
               </motion.div>
             </motion.div>

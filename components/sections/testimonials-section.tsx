@@ -4,17 +4,19 @@ import React from 'react'
 import { Star } from 'lucide-react'
 import { Card } from '@/components/ui/card'
 import { testimonials } from '@/data/homepage-data'
+import { useTranslations } from '@/hooks/use-translations'
 
 const TestimonialsSection = React.memo(() => {
+  const { t } = useTranslations()
   return (
     <section id="testimonios" className="py-16 sm:py-24 bg-black">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16 scroll-animate opacity-0 translate-y-8">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
-            Resultados <span className="text-opptim-green">reales</span> de nuestros clientes
+            {t('testimonials.animated.title')}
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Descubre cómo hemos ayudado a empresas como la tuya a crecer con IA
+            {t('testimonials.animated.subtitle')}
           </p>
         </div>
 

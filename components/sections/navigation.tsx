@@ -15,24 +15,31 @@ const Navigation = React.memo(() => {
   const { isScrollingDown, isAtTop } = useScroll()
 
   return (
-    <nav className={`fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-opptim-green/30 transition-all duration-300 ease-in-out ${
-      isScrollingDown && !isAtTop ? 'transform -translate-y-full' : 'transform translate-y-0'
-    }`}>
+    <nav className="fixed top-0 w-full z-50 backdrop-blur-lg border-b border-gray-500/20 shadow-2xl transition-all duration-300 ease-in-out">
       <div className={`max-w-7xl mx-auto px-4 sm:px-6 transition-all duration-300 ease-in-out ${
-        isScrollingDown && !isAtTop ? 'py-2' : 'py-4'
+        isScrollingDown && !isAtTop ? 'py-1' : 'py-4'
       }`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Image 
-              src="/opptim2png.png" 
-              alt="Opptim.Ai Logo" 
-              width={200} 
-              height={50}
-              className={`w-auto brightness-110 hover:brightness-125 transition-all duration-300 drop-shadow-lg ${
-                isScrollingDown && !isAtTop ? 'h-8' : 'h-12'
-              }`}
-              priority
-            />
+            <a 
+              href="#inicio" 
+              onClick={(e) => {
+                e.preventDefault()
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+              }}
+              className="cursor-pointer shadow-2xl hover:shadow-3xl transition-all duration-300 rounded-lg p-2"
+            >
+              <Image 
+                src="/opptim2png.png" 
+                alt="Opptim.Ai Logo" 
+                width={200} 
+                height={50}
+                className={`w-auto brightness-125 hover:brightness-200 hover:scale-105 transition-all duration-300 ${
+                  isScrollingDown && !isAtTop ? 'h-10' : 'h-12'
+                }`}
+                priority
+              />
+            </a>
           </div>
 
           {/* Desktop Navigation */}
