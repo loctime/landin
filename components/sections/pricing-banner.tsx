@@ -82,7 +82,7 @@ const PricingBanner = React.memo(() => {
             {/* Sección del video demo */}
             <div className="relative flex justify-center">
               {/* Contenedor del video con efectos */}
-              <div className="relative group max-w-xs w-full">
+              <div className="relative group max-w-sm w-full">
                 {/* Efectos de fondo para el video */}
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/20 via-transparent to-blue-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                 <div className="absolute inset-0 bg-gradient-to-tr from-purple-400/10 via-transparent to-teal-500/10 rounded-2xl"></div>
@@ -102,7 +102,7 @@ const PricingBanner = React.memo(() => {
                   </div>
                   
                   {/* Overlay con información del video */}
-                  <div className="absolute top-4 left-4 right-4 z-10">
+                  <div className="absolute top-2 left-4 right-4 z-10">
                     <div className="flex items-center gap-2 mb-1">
                       <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
                       <span className="text-white text-xs font-medium">Demo en vivo</span>

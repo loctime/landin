@@ -169,21 +169,21 @@ export const stats: Stat[] = [
 
 export const testimonials: Testimonial[] = [
   {
-    text: "Desde que empezamos a trabajar con Opptim.Ai, nuestra atención al paciente cambió por completo. Implementaron automatizaciones con IA que gestionan las citas, recordatorios y seguimiento post-tratamiento de forma impecable. Antes perdíamos mucho tiempo en tareas repetitivas, ahora nuestro equipo puede enfocarse en lo importante: atender bien a nuestros pacientes. ¡Un antes y un después para nuestra clínica!",
+    text: "Nuestra atención al paciente cambió por completo. Implementaron automatizaciones con IA que gestionan citas y recordatorios de forma impecable. ¡Un antes y un después para nuestra clínica!",
     author: "Dr. García",
     role: "Director, Clínica Dental",
     avatar: "👨‍⚕️",
     result: "Ahorro de 15h/semana",
   },
   {
-    text: "Ha sido un éxito total. Ahora nuestros pacientes reciben respuestas automáticas en WhatsApp y recordatorios personalizados sin que nadie del equipo tenga que intervenir. Además, las estadísticas que nos muestran ayudan a entender mejor el comportamiento de nuestros pacientes. Eficiencia, modernidad y resultados. ¡Los recomendamos al 100%!",
+    text: "Ha sido un éxito total. Nuestros pacientes reciben respuestas automáticas en WhatsApp y recordatorios personalizados. Eficiencia, modernidad y resultados. ¡Los recomendamos al 100%!",
     author: "Ana Martínez",
     role: "Gerente, Centro Médico",
     avatar: "👩‍⚕️",
     result: "95% satisfacción",
   },
   {
-    text: "Trabajar con Opptim.Ai fue una de las mejores decisiones del año. Nos ayudaron a automatizar el flujo de nuevos pacientes y a conectar el sistema de reservas con nuestra agenda digital. Lo que antes era un caos de mensajes ahora está completamente organizado. Además, su soporte es excelente: siempre disponibles y con soluciones rápidas. La IA realmente nos ha hecho la vida más fácil.",
+    text: "Fue una de las mejores decisiones del año. Automatizaron el flujo de pacientes y conectaron el sistema de reservas con nuestra agenda. El soporte es excelente y la IA nos ha hecho la vida más fácil.",
     author: "Carlos Ruiz",
     role: "Propietario, Consulta Privada",
     avatar: "👨‍💼",

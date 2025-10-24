@@ -675,3 +675,13 @@ html {
   background: rgba(54, 214, 230, 0.03);
   border-radius: 4px;
 }
+
+/* Hide scrollbar for testimonials carousel */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
