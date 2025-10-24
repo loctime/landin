@@ -24,7 +24,7 @@ const nextConfig = {
   
   // Experimental features para mejor performance
   experimental: {
-    optimizeCss: true,
+    // optimizeCss: true, // Deshabilitado por problemas con critters en Vercel
     optimizePackageImports: [
       'lucide-react', 
       '@radix-ui/react-icons',
