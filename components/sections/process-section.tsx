@@ -52,7 +52,7 @@ const ProcessSection = React.memo(() => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(/fondo33.png)',
+          backgroundImage: 'url(/fondo33.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

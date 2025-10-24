@@ -291,7 +291,7 @@ html {
 .elegant-gradient {
   background: 
     /* Imagen de fondo con degradado horizontal y líneas verticales */
-    url('/2fondo2.png') center center / cover no-repeat,
+    url('/2fondo2.webp') center center / cover no-repeat,
     /* Fallback degradado azul oscuro */
     linear-gradient(135deg, #0a0a1a 0%, #0f1419 30%, #1a2332 70%, #0f0f23 100%);
 }

@@ -49,7 +49,7 @@ const TestimonialsSection = React.memo(() => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(/fondo44.png)',
+          backgroundImage: 'url(/fondo44.webp)',
         }}
       />
       

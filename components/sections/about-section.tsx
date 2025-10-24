@@ -14,12 +14,12 @@ const AboutSection = React.memo(() => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(/fondo44.png)',
+          backgroundImage: 'url(/fondo44.webp)',
         }}
       />
       
-      {/* Tech Grid Lines */}
-      <div className="absolute inset-0 elegant-grid opacity-30"></div>
+      {/* Tech Grid Lines - Comentado para mostrar la imagen de fondo */}
+      {/* <div className="absolute inset-0 elegant-grid opacity-30"></div> */}
       
       {/* Additional decorative lines */}
       <div className="absolute inset-0">

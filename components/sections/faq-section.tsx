@@ -13,7 +13,7 @@ const FAQSection = React.memo(() => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(/fondo5.png)',
+          backgroundImage: 'url(/fondo5.webp)',
         }}
       />
       
