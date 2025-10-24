@@ -16,30 +16,8 @@ const StatsSection = React.memo(() => {
   return (
     <section className="py-16 sm:py-24 bg-gradient-to-r from-gray-900 to-black border-y border-opptim-green/20 relative overflow-hidden">
       {/* Efectos de fondo */}
-      <motion.div
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.03, 0.05, 0.03],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute top-0 left-1/4 w-96 h-96 bg-opptim-green rounded-full blur-3xl"
-      />
-      <motion.div
-        animate={{
-          scale: [1.2, 1, 1.2],
-          opacity: [0.03, 0.05, 0.03],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute bottom-0 right-1/4 w-96 h-96 bg-opptim-turquoise rounded-full blur-3xl"
-      />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-opptim-green/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-opptim-turquoise/5 rounded-full blur-3xl" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -64,19 +42,8 @@ const StatsSection = React.memo(() => {
                 }}
                 className="relative"
               >
-                {/* Círculo decorativo animado */}
-                <motion.div
-                  animate={{
-                    scale: [1, 1.2, 1],
-                    opacity: [0.2, 0.4, 0.2],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    delay: index * 0.3,
-                  }}
-                  className={`absolute inset-0 ${colors[index].bg} rounded-full blur-2xl`}
-                />
+                {/* Círculo decorativo */}
+                <div className={`absolute inset-0 ${colors[index].bg} rounded-full blur-2xl opacity-30`} />
 
                 {/* Número animado */}
                 <motion.div
@@ -91,35 +58,15 @@ const StatsSection = React.memo(() => {
                   }}
                   className="relative"
                 >
-                  <motion.div
-                    animate={{
-                      y: [0, -5, 0],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      delay: index * 0.2,
-                    }}
-                    className={`text-3xl sm:text-4xl lg:text-5xl font-bold ${colors[index].text} mb-2`}
-                  >
+                  <div className={`text-3xl sm:text-4xl lg:text-5xl font-bold ${colors[index].text} mb-2`}>
                     {stat.number}
-                  </motion.div>
+                  </div>
                   
                   {/* Sparkles decorativo */}
                   {index === 0 && (
-                    <motion.div
-                      animate={{
-                        rotate: [0, 360],
-                        scale: [1, 1.2, 1],
-                      }}
-                      transition={{
-                        duration: 3,
-                        repeat: Infinity,
-                      }}
-                      className="absolute -top-2 -right-2"
-                    >
+                    <div className="absolute -top-2 -right-2">
                       <Sparkles className={`w-4 h-4 ${colors[index].text}`} />
-                    </motion.div>
+                    </div>
                   )}
                 </motion.div>
 
