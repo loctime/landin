@@ -43,9 +43,21 @@ export const processSteps: ProcessStep[] = [
     description: "Detectar ineficiencias, puntos de fricción y potencial de automatización",
     key: "identify",
     visual: (
-      <div className="w-full h-32 bg-gray-900 rounded-lg border border-emerald-500/30 flex items-center justify-center">
-        <div className="w-16 h-16 border-2 border-emerald-500 rounded-full flex items-center justify-center animate-pulse">
-          <Search className="w-8 h-8 text-emerald-400" />
+      <div className="w-full h-40 bg-gradient-to-br from-emerald-900/20 to-emerald-800/10 rounded-2xl border border-emerald-500/20 flex items-center justify-center relative overflow-hidden">
+        {/* Efecto de ondas concéntricas */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-32 h-32 border border-emerald-400/30 rounded-full animate-ping" />
+          <div className="absolute w-24 h-24 border border-emerald-400/50 rounded-full animate-ping animation-delay-200" />
+          <div className="absolute w-16 h-16 border border-emerald-400/70 rounded-full animate-ping animation-delay-400" />
+        </div>
+        {/* Icono central con efecto de escaneo */}
+        <div className="relative z-10">
+          <div className="w-20 h-20 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-full flex items-center justify-center shadow-lg shadow-emerald-500/30">
+            <Search className="w-10 h-10 text-white" />
+          </div>
+          {/* Líneas de escaneo */}
+          <div className="absolute -top-2 -left-2 w-24 h-1 bg-gradient-to-r from-transparent via-emerald-400 to-transparent animate-pulse" />
+          <div className="absolute -bottom-2 -right-2 w-24 h-1 bg-gradient-to-r from-transparent via-emerald-400 to-transparent animate-pulse animation-delay-1000" />
         </div>
       </div>
     ),
@@ -56,16 +68,35 @@ export const processSteps: ProcessStep[] = [
     description: "Arquitectura de procesos impulsados por IA adaptados a tu stack",
     key: "design",
     visual: (
-      <div className="w-full h-32 bg-gray-900 rounded-lg border border-emerald-500/30 p-4 font-mono text-xs">
-        <div className="text-emerald-400">
-          class <span className="text-white">AIAgent</span> {"{"}
+      <div className="w-full h-40 bg-gradient-to-br from-blue-900/20 to-purple-800/10 rounded-2xl border border-blue-500/20 p-6 font-mono text-sm relative overflow-hidden">
+        {/* Fondo de partículas flotantes */}
+        <div className="absolute inset-0">
+          <div className="absolute top-4 left-4 w-2 h-2 bg-blue-400/40 rounded-full animate-bounce" />
+          <div className="absolute top-8 right-6 w-1 h-1 bg-purple-400/60 rounded-full animate-bounce animation-delay-300" />
+          <div className="absolute bottom-6 left-8 w-1.5 h-1.5 bg-emerald-400/50 rounded-full animate-bounce animation-delay-600" />
         </div>
-        <div className="text-gray-400 ml-4">constructor() {"{"}</div>
-        <div className="text-emerald-400 ml-8">
-          this.status = <span className="text-yellow-400">'active'</span>
+        
+        {/* Código con efecto de typing */}
+        <div className="relative z-10">
+          <div className="text-blue-400 font-semibold">
+            class <span className="text-white">AIAgent</span> {"{"}
+          </div>
+          <div className="text-gray-300 ml-4 mt-1">
+            constructor() {"{"}
+          </div>
+          <div className="text-emerald-400 ml-8 mt-1">
+            this.status = <span className="text-yellow-300">'active'</span>
+          </div>
+          <div className="text-gray-300 ml-4 mt-1">
+            {"}"}
+          </div>
+          <div className="text-blue-400 font-semibold">
+            {"}"}
+          </div>
         </div>
-        <div className="text-gray-400 ml-4">{"}"}</div>
-        <div className="text-emerald-400">{"}"}</div>
+        
+        {/* Cursor parpadeante */}
+        <div className="absolute bottom-6 right-6 w-1 h-4 bg-emerald-400 animate-pulse" />
       </div>
     ),
   },
@@ -75,21 +106,48 @@ export const processSteps: ProcessStep[] = [
     description: "Entregar e integrar la automatización en tu flujo de trabajo",
     key: "automate",
     visual: (
-      <div className="w-full h-32 bg-gray-900 rounded-lg border border-emerald-500/30 flex items-center justify-around p-4">
-        <div className="flex flex-col items-center">
-          <Zap className="w-6 h-6 text-emerald-400 mb-1" />
-          <span className="text-xs text-gray-400">Trigger</span>
+      <div className="w-full h-40 bg-gradient-to-br from-orange-900/20 to-red-800/10 rounded-2xl border border-orange-500/20 flex items-center justify-center relative overflow-hidden">
+        {/* Flujo de energía */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-full h-full flex items-center justify-around px-4">
+            {/* Trigger */}
+            <div className="flex flex-col items-center relative">
+              <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center shadow-lg shadow-orange-500/30 mb-2">
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <span className="text-xs text-orange-300 font-medium">Trigger</span>
+              {/* Energía saliente */}
+              <div className="absolute -right-6 top-1/2 transform -translate-y-1/2">
+                <div className="w-8 h-1 bg-gradient-to-r from-orange-400 to-transparent animate-pulse" />
+              </div>
+            </div>
+
+            {/* Process */}
+            <div className="flex flex-col items-center relative">
+              <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-500/30 mb-2">
+                <Users className="w-6 h-6 text-white" />
+              </div>
+              <span className="text-xs text-emerald-300 font-medium">Process</span>
+              {/* Energía saliente */}
+              <div className="absolute -right-6 top-1/2 transform -translate-y-1/2">
+                <div className="w-8 h-1 bg-gradient-to-r from-emerald-400 to-transparent animate-pulse animation-delay-500" />
+              </div>
+            </div>
+
+            {/* Result */}
+            <div className="flex flex-col items-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30 mb-2">
+                <BarChart3 className="w-6 h-6 text-white" />
+              </div>
+              <span className="text-xs text-blue-300 font-medium">Result</span>
+            </div>
+          </div>
         </div>
-        <ArrowRight className="w-4 h-4 text-emerald-400" />
-        <div className="flex flex-col items-center">
-          <Users className="w-6 h-6 text-emerald-400 mb-1" />
-          <span className="text-xs text-gray-400">Process</span>
-        </div>
-        <ArrowRight className="w-4 h-4 text-emerald-400" />
-        <div className="flex flex-col items-center">
-          <BarChart3 className="w-6 h-6 text-emerald-400 mb-1" />
-          <span className="text-xs text-gray-400">Result</span>
-        </div>
+        
+        {/* Partículas de energía */}
+        <div className="absolute top-4 left-1/4 w-1 h-1 bg-orange-400 rounded-full animate-ping" />
+        <div className="absolute top-8 right-1/3 w-1 h-1 bg-emerald-400 rounded-full animate-ping animation-delay-300" />
+        <div className="absolute bottom-6 left-1/3 w-1 h-1 bg-blue-400 rounded-full animate-ping animation-delay-600" />
       </div>
     ),
   },
