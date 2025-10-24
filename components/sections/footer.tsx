@@ -62,9 +62,30 @@ const Footer = React.memo(() => {
                     linkKey = followKeys[linkIndex] || ''
                   }
                   
+                  // Definir URLs para cada enlace
+                  let href = '#'
+                  if (section.key === 'legal') {
+                    if (linkKey === 'privacy') href = '/privacidad'
+                    else if (linkKey === 'terms') href = '/terminos'
+                    else if (linkKey === 'cookies') href = '/cookies'
+                  } else if (section.key === 'navigation') {
+                    if (linkKey === 'services') href = '#servicios'
+                    else if (linkKey === 'about') href = '#sobre-nosotros'
+                    else if (linkKey === 'testimonials') href = '#testimonios'
+                    else if (linkKey === 'faq') href = '#faq'
+                  } else if (section.key === 'follow') {
+                    if (linkKey === 'instagram') href = `https://instagram.com/${contactInfo.instagram}`
+                    else if (linkKey === 'linkedin') href = contactInfo.linkedin || '#'
+                    else if (linkKey === 'whatsapp') href = contactInfo.whatsapp
+                  }
+                  
                   return (
                     <li key={linkIndex}>
-                      <a href="#" className="text-gray-400 hover:text-opptim-green transition-colors text-sm">
+                      <a 
+                        href={href} 
+                        className="text-gray-400 hover:text-opptim-green transition-colors text-sm"
+                        {...(href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                      >
                         {section.key && linkKey ? t(`footer.sections.${section.key}.links.${linkKey}`) : link}
                       </a>
                     </li>

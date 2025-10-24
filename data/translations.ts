@@ -288,6 +288,86 @@ export const translations = {
         },
       },
     },
+    // Privacy Policy
+    privacy: {
+      title: 'Política de Privacidad',
+      subtitle: 'Información sobre el tratamiento de datos personales',
+      lastUpdated: 'Última actualización: Diciembre 2024',
+      sections: {
+        introduction: {
+          title: '1. Introducción',
+          content: 'En Opptim.Ai, nos comprometemos a proteger la privacidad y seguridad de la información personal de nuestros usuarios. Esta Política de Privacidad describe cómo recopilamos, utilizamos, almacenamos y protegemos su información personal cuando utiliza nuestros servicios de automatización con inteligencia artificial.'
+        },
+        dataCollection: {
+          title: '2. Información que Recopilamos',
+          content: 'Recopilamos información que usted nos proporciona directamente, como nombre, dirección de correo electrónico, número de teléfono, información de la empresa y cualquier otra información que decida compartir con nosotros para la prestación de nuestros servicios. También recopilamos datos de uso y información técnica para mejorar nuestros servicios.'
+        },
+        dataUsage: {
+          title: '3. Cómo Utilizamos su Información',
+          content: 'Utilizamos su información personal para: proporcionar y mejorar nuestros servicios, comunicarnos con usted, procesar transacciones, enviar actualizaciones sobre nuestros servicios, configurar sus agentes de IA personalizados y cumplir con obligaciones legales.'
+        },
+        dataProtection: {
+          title: '4. Protección de Datos',
+          content: 'Implementamos medidas de seguridad técnicas y organizativas apropiadas para proteger su información personal contra acceso no autorizado, alteración, divulgación o destrucción. Utilizamos encriptación, acceso restringido y monitoreo continuo de nuestros sistemas.'
+        },
+        cookies: {
+          title: '5. Cookies y Tecnologías Similares',
+          content: 'Utilizamos cookies y tecnologías similares para mejorar su experiencia en nuestro sitio web, analizar el tráfico y personalizar el contenido. Puede gestionar las cookies desde la configuración de su navegador.'
+        },
+        rights: {
+          title: '6. Sus Derechos',
+          content: 'Tiene derecho a acceder, rectificar, eliminar, limitar el procesamiento, portabilidad de datos y oponerse al procesamiento de su información personal. Para ejercer estos derechos, contáctenos en info@opptim.ai'
+        },
+        contact: {
+          title: '7. Contacto',
+          content: 'Si tiene preguntas sobre esta Política de Privacidad, puede contactarnos en: info@opptim.ai'
+        }
+      }
+    },
+    // Terms and Conditions
+    terms: {
+      title: 'Términos y Condiciones',
+      subtitle: 'Condiciones de uso de nuestros servicios',
+      lastUpdated: 'Última actualización: Diciembre 2024',
+      sections: {
+        acceptance: {
+          title: '1. Aceptación de los Términos',
+          content: 'Al acceder y utilizar los servicios de Opptim.Ai, usted acepta estar sujeto a estos Términos y Condiciones. Si no está de acuerdo con alguna parte de estos términos, no debe utilizar nuestros servicios.'
+        },
+        services: {
+          title: '2. Descripción de los Servicios',
+          content: 'Opptim.Ai proporciona servicios de automatización empresarial mediante agentes de inteligencia artificial, incluyendo chatbots, sistemas de recordatorios, gestión de citas y otras soluciones de automatización personalizadas.'
+        },
+        obligations: {
+          title: '3. Obligaciones del Usuario',
+          content: 'El usuario se compromete a: proporcionar información veraz y actualizada, utilizar los servicios de manera responsable y conforme a la ley, no interferir con el funcionamiento de nuestros sistemas, y mantener la confidencialidad de sus credenciales de acceso.'
+        },
+        payments: {
+          title: '4. Pagos y Facturación',
+          content: 'Los precios de nuestros servicios están claramente especificados. Los pagos se realizan según los términos acordados en el contrato de servicio. Los precios pueden estar sujetos a cambios con notificación previa de 30 días.'
+        },
+        intellectual: {
+          title: '5. Propiedad Intelectual',
+          content: 'Todos los derechos de propiedad intelectual sobre nuestros servicios, incluyendo software, algoritmos y contenido, pertenecen a Opptim.Ai. El usuario no adquiere derechos de propiedad sobre nuestros sistemas.'
+        },
+        liability: {
+          title: '6. Limitación de Responsabilidad',
+          content: 'Opptim.Ai no será responsable por daños indirectos, incidentales o consecuenciales. Nuestra responsabilidad se limita al valor de los servicios contratados en el período de 12 meses anteriores al evento que origine la reclamación.'
+        },
+        termination: {
+          title: '7. Terminación',
+          content: 'Cualquiera de las partes puede terminar el acuerdo con notificación previa de 30 días. Al terminar, el usuario debe cesar el uso de nuestros servicios y sus datos serán eliminados en 90 días.'
+        },
+        modifications: {
+          title: '8. Modificaciones',
+          content: 'Nos reservamos el derecho de modificar estos términos en cualquier momento. Las modificaciones entrarán en vigor al ser publicadas en nuestro sitio web con 30 días de antelación.'
+        },
+        contact: {
+          title: '9. Contacto',
+          content: 'Para cualquier consulta sobre estos Términos y Condiciones, puede contactarnos en: info@opptim.ai'
+        }
+      }
+    },
   },
   en: {
     // Navigation
@@ -577,6 +657,86 @@ export const translations = {
           },
         },
       },
+    },
+    // Privacy Policy
+    privacy: {
+      title: 'Privacy Policy',
+      subtitle: 'Information about personal data processing',
+      lastUpdated: 'Last updated: December 2024',
+      sections: {
+        introduction: {
+          title: '1. Introduction',
+          content: 'At Opptim.Ai, we are committed to protecting the privacy and security of our users\' personal information. This Privacy Policy describes how we collect, use, store and protect your personal information when you use our AI automation services.'
+        },
+        dataCollection: {
+          title: '2. Information We Collect',
+          content: 'We collect information that you provide to us directly, such as name, email address, phone number, company information and any other information you decide to share with us for the provision of our services. We also collect usage data and technical information to improve our services.'
+        },
+        dataUsage: {
+          title: '3. How We Use Your Information',
+          content: 'We use your personal information to: provide and improve our services, communicate with you, process transactions, send updates about our services, configure your personalized AI agents and comply with legal obligations.'
+        },
+        dataProtection: {
+          title: '4. Data Protection',
+          content: 'We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure or destruction. We use encryption, restricted access and continuous monitoring of our systems.'
+        },
+        cookies: {
+          title: '5. Cookies and Similar Technologies',
+          content: 'We use cookies and similar technologies to improve your experience on our website, analyze traffic and personalize content. You can manage cookies from your browser settings.'
+        },
+        rights: {
+          title: '6. Your Rights',
+          content: 'You have the right to access, rectify, delete, limit processing, data portability and object to the processing of your personal information. To exercise these rights, contact us at info@opptim.ai'
+        },
+        contact: {
+          title: '7. Contact',
+          content: 'If you have questions about this Privacy Policy, you can contact us at: info@opptim.ai'
+        }
+      }
+    },
+    // Terms and Conditions
+    terms: {
+      title: 'Terms and Conditions',
+      subtitle: 'Terms of use of our services',
+      lastUpdated: 'Last updated: December 2024',
+      sections: {
+        acceptance: {
+          title: '1. Acceptance of Terms',
+          content: 'By accessing and using Opptim.Ai services, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you should not use our services.'
+        },
+        services: {
+          title: '2. Description of Services',
+          content: 'Opptim.Ai provides business automation services through artificial intelligence agents, including chatbots, reminder systems, appointment management and other customized automation solutions.'
+        },
+        obligations: {
+          title: '3. User Obligations',
+          content: 'The user agrees to: provide truthful and up-to-date information, use the services responsibly and in accordance with the law, not interfere with the operation of our systems, and maintain the confidentiality of their access credentials.'
+        },
+        payments: {
+          title: '4. Payments and Billing',
+          content: 'The prices of our services are clearly specified. Payments are made according to the terms agreed in the service contract. Prices may be subject to change with 30 days prior notice.'
+        },
+        intellectual: {
+          title: '5. Intellectual Property',
+          content: 'All intellectual property rights over our services, including software, algorithms and content, belong to Opptim.Ai. The user does not acquire property rights over our systems.'
+        },
+        liability: {
+          title: '6. Limitation of Liability',
+          content: 'Opptim.Ai will not be liable for indirect, incidental or consequential damages. Our liability is limited to the value of the contracted services in the 12-month period prior to the event giving rise to the claim.'
+        },
+        termination: {
+          title: '7. Termination',
+          content: 'Either party may terminate the agreement with 30 days prior notice. Upon termination, the user must cease using our services and their data will be deleted within 90 days.'
+        },
+        modifications: {
+          title: '8. Modifications',
+          content: 'We reserve the right to modify these terms at any time. Modifications will take effect when published on our website with 30 days advance notice.'
+        },
+        contact: {
+          title: '9. Contact',
+          content: 'For any questions about these Terms and Conditions, you can contact us at: info@opptim.ai'
+        }
+      }
     },
   },
 }

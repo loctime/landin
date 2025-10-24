@@ -13,16 +13,19 @@ export interface ProcessStep {
   title: string
   description: string
   visual: React.ReactNode
+  key?: string
 }
 
 export interface Benefit {
   icon: LucideIcon
   title: string
+  key?: string
 }
 
 export interface Stat {
   number: string
   label: string
+  key?: string
 }
 
 export interface Testimonial {
@@ -36,9 +39,11 @@ export interface Testimonial {
 export interface FAQ {
   question: string
   answer: string
+  key?: string
 }
 
 export interface FooterSection {
   title: string
   links: string[]
+  key?: string
 }

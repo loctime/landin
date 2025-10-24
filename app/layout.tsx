@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Analytics } from '@vercel/analytics/next'
-import { LanguageProvider } from '@/components/language-provider'
+import { LanguageProvider } from '@/contexts/language-context'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es">
+    <html>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <LanguageProvider>
           {children}

@@ -190,5 +190,6 @@ export const contactInfo = {
   phone: "+34 633 57 28 77",
   email: "contact@opptimai.es",
   instagram: "opptim.ai",
+  linkedin: "https://linkedin.com/company/opptim-ai",
   whatsapp: "https://wa.me/34633572877"
 }
