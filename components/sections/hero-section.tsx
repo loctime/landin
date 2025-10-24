@@ -43,8 +43,16 @@ const HeroSection = React.memo(() => {
         <div className="scroll-animate opacity-0 translate-y-8">
           <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-white mb-4 sm:mb-6 text-balance">
             Ahorra tiempo y dinero con{" "}
-            <span className="bg-gradient-to-r from-opptim-green via-opptim-turquoise to-opptim-blue bg-clip-text text-transparent">
-              agentes de IA
+            <span className="relative inline-block">
+              <span className="absolute inset-0 bg-gradient-to-r from-opptim-green via-opptim-turquoise to-opptim-blue opacity-40 blur-md">
+                agentes de IA
+              </span>
+              <span className="relative bg-gradient-to-r from-opptim-green via-opptim-turquoise to-opptim-blue bg-clip-text text-transparent" style={{ 
+                textShadow: '0 0 2px rgba(0,255,157,0.8), 0 0 20px rgba(9, 39, 173, 0.6), 0 2px 10px rgba(0,0,0,0.8)',
+                WebkitTextStroke: '1.5px rgba(0,255,157,0.3)'
+              }}>
+                agentes de IA
+              </span>
             </span>
           </h1>
 

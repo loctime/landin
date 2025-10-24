@@ -79,7 +79,7 @@ const AgentsSection = React.memo(() => {
               animate={{ rotate: 360 }}
               transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
             >
-              <Zap className="w-4 h-4 text-opptim-green" />
+              <Zap className="w- 4 h-4 text-opptim-green" />
             </motion.div>
             <span className="text-opptim-green text-sm font-medium">Powered by AI</span>
           </motion.div>
