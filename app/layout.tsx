@@ -3,6 +3,7 @@ import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Analytics } from '@vercel/analytics/next'
 import { LanguageProvider } from '@/contexts/language-context'
+import { SafeLayout } from '@/components/layout/safe-layout'
 import { Playfair_Display, Inter } from 'next/font/google'
 import './globals.css'
 
@@ -54,11 +55,13 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${playfairDisplay.variable} ${inter.variable}`}>
-        <LanguageProvider>
-          <main id="main-content" role="main">
-            {children}
-          </main>
-        </LanguageProvider>
+        <SafeLayout>
+          <LanguageProvider>
+            <main id="main-content" role="main">
+              {children}
+            </main>
+          </LanguageProvider>
+        </SafeLayout>
         <Analytics />
       </body>
     </html>

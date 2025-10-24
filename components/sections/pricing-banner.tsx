@@ -94,9 +94,18 @@ const PricingBanner = React.memo(() => {
                       className="w-full h-full object-cover"
                       controls
                       preload="metadata"
+                      playsInline
+                      muted
                       poster="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjcwMCIgdmlld0JveD0iMCAwIDQwMCA3MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNzAwIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudCIgeDE9IjAiIHkxPSIwIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgo8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMTU2NWU2O3N0b3Atb3BhY2l0eToxIiAvPgo8c3RvcCBvZmZzZXQ9IjUwJSIgc3R5bGU9InN0b3AtY29sb3I6IzFkNGJhYztzdG9wLW9wYWNpdHk6MSIgLz4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMWU0MDk2O3N0b3Atb3BhY2l0eToxIiAvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+CjxjaXJjbGUgY3g9IjIwMCIgY3k9IjM1MCIgcj0iNjAiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuOSIvPgo8cG9seWdvbiBwb2ludHM9IjE3NSwzMjAgMjI1LDM1MCAxNzUsMzgwIiBmaWxsPSIjMTU2NWU2Ii8+Cjwvc3ZnPg=="
+                      onError={(e) => {
+                        console.error('Error cargando video:', e);
+                        const target = e.target as HTMLVideoElement;
+                        target.style.display = 'none';
+                      }}
                     >
-                      <source src="/demo chatbot.mp4" type="video/mp4" />
+                      <source src="/old/demo%20chatbot.mp4" type="video/mp4" />
+                      <source src="/old/robovideo.mp4" type="video/mp4" />
+                      <source src="/old/Robotaso.mp4" type="video/mp4" />
                       Tu navegador no soporta el elemento de video.
                     </video>
                   </div>

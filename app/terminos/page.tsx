@@ -1,4 +1,7 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
+import { ArrowLeft } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
   title: 'Términos y Condiciones - Opptim.Ai',
@@ -15,6 +18,24 @@ export default function TermsPage() {
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-16 max-w-4xl">
+        {/* Header con logo y botón de volver */}
+        <div className="mb-8">
+          <div className="flex items-center justify-between mb-6">
+            <Link href="/" className="flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors">
+              <ArrowLeft className="w-5 h-5" />
+              <span>Volver al inicio</span>
+            </Link>
+          </div>
+          
+          {/* Logo */}
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center space-x-2 text-3xl font-bold">
+              <span className="text-foreground">Opptim</span>
+              <span className="text-primary">.Ai</span>
+            </div>
+          </div>
+        </div>
+
         <div className="prose prose-lg max-w-none">
           <h1 className="text-4xl font-bold mb-4 text-foreground">Términos y Condiciones</h1>
           <p className="text-xl text-muted-foreground mb-8">Condiciones de uso de nuestros servicios</p>
@@ -112,6 +133,16 @@ export default function TermsPage() {
               <strong>Nota importante:</strong> Al utilizar nuestros servicios, usted acepta estos términos y condiciones. 
               Si no está de acuerdo con alguna parte de estos términos, no debe utilizar nuestros servicios.
             </p>
+          </div>
+          
+          {/* Botón de volver al final */}
+          <div className="mt-12 text-center">
+            <Link href="/">
+              <Button className="inline-flex items-center space-x-2">
+                <ArrowLeft className="w-4 h-4" />
+                <span>Volver al inicio</span>
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

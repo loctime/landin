@@ -4,6 +4,9 @@ import { useEffect } from 'react'
 
 export function useScrollAnimation() {
   useEffect(() => {
+    // Solo ejecutar en el cliente
+    if (typeof window === 'undefined') return
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

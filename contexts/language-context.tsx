@@ -16,21 +16,27 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguageState] = useState<Language>('es')
   const [isLoaded, setIsLoaded] = useState(false)
+  const [isClient, setIsClient] = useState(false)
 
-  // Cargar idioma guardado al inicializar
+  // Verificar que estamos en el cliente
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const savedLanguage = localStorage.getItem('opptim-language') as Language
-      if (savedLanguage && (savedLanguage === 'es' || savedLanguage === 'en')) {
-        setLanguageState(savedLanguage)
-      }
-      setIsLoaded(true)
-    }
+    setIsClient(true)
   }, [])
 
-  // Actualizar el atributo lang del HTML
+  // Cargar idioma guardado al inicializar - solo en cliente
   useEffect(() => {
-    if (isLoaded && typeof document !== 'undefined') {
+    if (!isClient) return
+    
+    const savedLanguage = localStorage.getItem('opptim-language') as Language
+    if (savedLanguage && (savedLanguage === 'es' || savedLanguage === 'en')) {
+      setLanguageState(savedLanguage)
+    }
+    setIsLoaded(true)
+  }, [isClient])
+
+  // Actualizar el atributo lang del HTML - solo en cliente
+  useEffect(() => {
+    if (isLoaded) {
       document.documentElement.lang = language
     }
   }, [language, isLoaded])

@@ -1,5 +1,7 @@
 // Exportar todos los componentes comunes
 export { AnimatedCounter } from './animated-counter'
+export { ClientOnly } from './client-only'
+export { HydrationBoundary } from './hydration-boundary'
 export { ScrollReveal } from './scroll-reveal'
 export { LoadingSpinner } from './loading-spinner'
 export { ConfirmationDialog } from './confirmation-dialog'
