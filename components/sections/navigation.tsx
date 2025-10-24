@@ -5,24 +5,32 @@ import { Globe, ArrowRight, Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { useMobileMenu } from '@/hooks/use-mobile-menu'
-import { useLanguage } from '@/hooks/use-language'
+import { useTranslations } from '@/hooks/use-translations'
+import { useScroll } from '@/hooks/use-scroll'
 import Image from 'next/image'
 
 const Navigation = React.memo(() => {
   const { isMenuOpen, toggleMenu, closeMenu } = useMobileMenu()
-  const { language, toggleLanguage } = useLanguage()
+  const { t, language, toggleLanguage } = useTranslations()
+  const { isScrollingDown, isAtTop } = useScroll()
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-opptim-green/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+    <nav className={`fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-opptim-green/30 transition-all duration-300 ease-in-out ${
+      isScrollingDown && !isAtTop ? 'transform -translate-y-full' : 'transform translate-y-0'
+    }`}>
+      <div className={`max-w-7xl mx-auto px-4 sm:px-6 transition-all duration-300 ease-in-out ${
+        isScrollingDown && !isAtTop ? 'py-2' : 'py-4'
+      }`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <Image 
               src="/opptim2png.png" 
               alt="Opptim.Ai Logo" 
-              width={150} 
-              height={40}
-              className="h-8 w-auto"
+              width={200} 
+              height={50}
+              className={`w-auto brightness-110 hover:brightness-125 transition-all duration-300 drop-shadow-lg ${
+                isScrollingDown && !isAtTop ? 'h-8' : 'h-12'
+              }`}
               priority
             />
           </div>
@@ -30,16 +38,16 @@ const Navigation = React.memo(() => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <a href="#servicios" className="text-gray-300 hover:text-opptim-green transition-colors">
-              Servicios
+              {t('nav.services')}
             </a>
             <a href="#sobre-nosotros" className="text-gray-300 hover:text-opptim-green transition-colors">
-              Sobre Nosotros
+              {t('nav.about')}
             </a>
             <a href="#testimonios" className="text-gray-300 hover:text-opptim-green transition-colors">
-              Testimonios
+              {t('nav.testimonials')}
             </a>
             <a href="#faq" className="text-gray-300 hover:text-opptim-green transition-colors">
-              FAQ
+              {t('nav.faq')}
             </a>
           </div>
 
@@ -57,7 +65,7 @@ const Navigation = React.memo(() => {
               className="bg-opptim-green hover:bg-opptim-green/90 text-black font-medium"
               onClick={() => window.open('https://wa.me/34633572877', '_blank')}
             >
-              Contáctanos
+              {t('nav.contact')}
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           </div>
@@ -92,34 +100,34 @@ const Navigation = React.memo(() => {
                 className="text-gray-300 hover:text-opptim-green transition-colors py-2"
                 onClick={closeMenu}
               >
-                Servicios
+                {t('nav.services')}
               </a>
               <a 
                 href="#sobre-nosotros" 
                 className="text-gray-300 hover:text-opptim-green transition-colors py-2"
                 onClick={closeMenu}
               >
-                Sobre Nosotros
+                {t('nav.about')}
               </a>
               <a 
                 href="#testimonios" 
                 className="text-gray-300 hover:text-opptim-green transition-colors py-2"
                 onClick={closeMenu}
               >
-                Testimonios
+                {t('nav.testimonials')}
               </a>
               <a 
                 href="#faq" 
                 className="text-gray-300 hover:text-opptim-green transition-colors py-2"
                 onClick={closeMenu}
               >
-                FAQ
+                {t('nav.faq')}
               </a>
               <Button 
                 className="bg-opptim-green hover:bg-opptim-green/90 text-black font-medium w-full mt-4"
                 onClick={() => window.open('https://wa.me/34633572877', '_blank')}
               >
-                Contáctanos
+                {t('nav.contact')}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>

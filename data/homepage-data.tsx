@@ -100,10 +100,10 @@ export const benefits: Benefit[] = [
 ]
 
 export const stats: Stat[] = [
-  { number: "100%", label: "Atención personalizada" },
-  { number: "24/7", label: "Disponibilidad total" },
-  { number: "39€", label: "Desde sólo" },
-  { number: "100%", label: "Resultados garantizados" },
+  { number: "100%", label: "Atención personalizada", key: "personalized" },
+  { number: "24/7", label: "Disponibilidad total", key: "availability" },
+  { number: "39€", label: "Desde sólo", key: "price" },
+  { number: "100%", label: "Resultados garantizados", key: "guaranteed" },
 ]
 
 export const testimonials: Testimonial[] = [

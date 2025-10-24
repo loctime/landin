@@ -5,8 +5,10 @@ import { motion } from 'framer-motion'
 import { stats } from '@/data/homepage-data'
 import { Sparkles } from 'lucide-react'
 import { Particles } from '@/components/ui/particles'
+import { useTranslations } from '@/hooks/use-translations'
 
 const StatsSection = React.memo(() => {
+  const { t } = useTranslations()
   const colors = [
     { text: 'text-opptim-green', bg: 'bg-opptim-green/20', gradient: 'from-emerald-500 to-green-500' },
     { text: 'text-opptim-turquoise', bg: 'bg-opptim-turquoise/20', gradient: 'from-cyan-500 to-teal-500' },
@@ -84,7 +86,7 @@ const StatsSection = React.memo(() => {
                   transition={{ delay: 0.5 + index * 0.15 }}
                   className="text-gray-300 text-sm sm:text-base relative"
                 >
-                  {stat.label}
+                  {stat.key ? t(`stats.${stat.key}`) : stat.label}
                 </motion.div>
 
                 {/* Línea decorativa animada */}

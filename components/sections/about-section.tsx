@@ -4,8 +4,10 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Card } from '@/components/ui/card'
 import { Target, Lightbulb, Users } from 'lucide-react'
+import { useTranslations } from '@/hooks/use-translations'
 
 const AboutSection = React.memo(() => {
+  const { t } = useTranslations()
   return (
     <section id="sobre-nosotros" className="py-16 sm:py-24 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
       {/* Efectos de fondo */}
@@ -31,10 +33,10 @@ const AboutSection = React.memo(() => {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
-            Sobre <span className="text-opptim-green">Nosotros</span>
+            {t('about.title')}
           </h2>
           <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-            Somos expertos en automatización inteligente con IA
+            {t('about.subtitle')}
           </p>
         </motion.div>
 
@@ -85,7 +87,7 @@ const AboutSection = React.memo(() => {
                     transition={{ delay: 0.3 }}
                     className="text-2xl font-bold text-white mb-4"
                   >
-                    Nuestra Historia
+                    {t('about.history.title')}
                   </motion.h3>
                   <motion.p
                     initial={{ opacity: 0 }}
@@ -94,7 +96,7 @@ const AboutSection = React.memo(() => {
                     transition={{ delay: 0.4 }}
                     className="text-gray-300 leading-relaxed"
                   >
-                    El proyecto nació con la idea de ayudar a pequeñas y medianas empresas a aprovechar la inteligencia artificial sin necesidad de grandes inversiones. Comenzamos ofreciendo chatbots básicos para atención al cliente y, con el tiempo, fuimos ampliando nuestros servicios a automatizaciones completas de procesos internos, integraciones con CRM y estrategias de IA conversacional. Hoy, trabajamos con empresas de distintos sectores, ayudándolas a digitalizarse y mantenerse competitivas.
+                    {t('about.history.content')}
                   </motion.p>
                 </div>
               </div>
@@ -145,7 +147,7 @@ const AboutSection = React.memo(() => {
                       transition={{ delay: 0.4 }}
                       className="text-2xl font-bold text-white mb-4"
                     >
-                      Nuestra Misión
+                      {t('about.mission.title')}
                     </motion.h3>
                     <motion.p
                       initial={{ opacity: 0 }}
@@ -154,7 +156,7 @@ const AboutSection = React.memo(() => {
                       transition={{ delay: 0.5 }}
                       className="text-gray-300 leading-relaxed"
                     >
-                      Democratizar el acceso a la inteligencia artificial, ayudando a empresas de todos los tamaños a automatizar sus procesos y mejorar la experiencia de sus clientes.
+                      {t('about.mission.content')}
                     </motion.p>
                   </div>
                 </div>
@@ -212,7 +214,7 @@ const AboutSection = React.memo(() => {
                       transition={{ delay: 0.5 }}
                       className="text-2xl font-bold text-white mb-4"
                     >
-                      Nuestro Equipo
+                      {t('about.team.title')}
                     </motion.h3>
                     <motion.p
                       initial={{ opacity: 0 }}
@@ -221,7 +223,7 @@ const AboutSection = React.memo(() => {
                       transition={{ delay: 0.6 }}
                       className="text-gray-300 leading-relaxed"
                     >
-                      Contamos con un equipo de expertos técnicos en IA, comprometidos con ofrecer soluciones innovadoras y personalizadas para cada cliente. Nuestra pasión es transformar negocios mediante la automatización inteligente.
+                      {t('about.team.content')}
                     </motion.p>
                   </div>
                 </div>

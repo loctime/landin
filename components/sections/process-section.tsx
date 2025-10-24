@@ -5,8 +5,10 @@ import { motion } from 'framer-motion'
 import { Card } from '@/components/ui/card'
 import { benefits } from '@/data/homepage-data'
 import { Search, Code, Zap, Users, BarChart3, ArrowRight } from 'lucide-react'
+import { useTranslations } from '@/hooks/use-translations'
 
 const ProcessSection = React.memo(() => {
+  const { t } = useTranslations()
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -41,7 +43,7 @@ const ProcessSection = React.memo(() => {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
-            Automatiza con IA en solo <span className="text-emerald-400">3 pasos</span>
+            {t('process.title')}
           </h2>
         </motion.div>
 

@@ -4,9 +4,11 @@ import React from 'react'
 import { ArrowRight, Mail, Phone, Instagram } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { footerSections, contactInfo } from '@/data/homepage-data'
+import { useTranslations } from '@/hooks/use-translations'
 import Image from 'next/image'
 
 const Footer = React.memo(() => {
+  const { t } = useTranslations()
   return (
     <footer className="bg-black border-t border-opptim-green/20 py-8 sm:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -22,7 +24,7 @@ const Footer = React.memo(() => {
               />
             </div>
             <p className="text-gray-400 text-sm mb-4">
-              Ahorra tiempo y dinero con agentes de IA
+              {t('footer.description')}
             </p>
             <div className="space-y-2 text-sm">
               <a href={`tel:${contactInfo.phone}`} className="flex items-center text-gray-400 hover:text-opptim-green transition-colors">
@@ -59,10 +61,10 @@ const Footer = React.memo(() => {
         <div className="border-t border-opptim-green/20 mt-12 pt-8">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-white mb-4">
-              ¿Listo para <span className="text-opptim-green">automatizar</span> tu negocio?
+              {t('footer.readyTitle')}
             </h3>
             <p className="text-gray-400 mb-6">
-              Únete a las empresas que ya automatizaron sus procesos con IA
+              {t('footer.readySubtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -70,7 +72,7 @@ const Footer = React.memo(() => {
                 className="bg-opptim-green hover:bg-opptim-green/90 active:bg-opptim-green/80 text-black font-medium px-8 py-4 text-lg"
                 onClick={() => window.open(contactInfo.whatsapp, '_blank')}
               >
-                💬 Contactar por WhatsApp
+                💬 {t('footer.contactWhatsapp')}
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button
@@ -79,16 +81,16 @@ const Footer = React.memo(() => {
                 className="border-opptim-turquoise/30 text-opptim-turquoise hover:bg-opptim-turquoise/10 active:bg-opptim-turquoise/20 px-8 py-4 text-lg bg-transparent"
                 onClick={() => window.open(`mailto:${contactInfo.email}`, '_blank')}
               >
-                📧 Enviar Email
+                📧 {t('footer.sendEmail')}
               </Button>
             </div>
             <p className="text-xs text-gray-500 mt-4">
-              Atención 100% personalizada • Disponibilidad 24/7 • Resultados garantizados
+              {t('footer.features')}
             </p>
           </div>
           
           <div className="text-center">
-            <p className="text-gray-400 text-sm">© 2025 Opptim.Ai - Todos los derechos reservados.</p>
+            <p className="text-gray-400 text-sm">© 2025 Opptim.Ai - {t('footer.rights')}</p>
           </div>
         </div>
       </div>

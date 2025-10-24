@@ -1,12 +1,24 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 type Language = 'es' | 'en'
 
 // Simple hook sin dependencias externas
 export const useLanguage = () => {
   const [language, setLanguageState] = useState<Language>('es')
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  // Cargar idioma guardado al inicializar
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const savedLanguage = localStorage.getItem('opptim-language') as Language
+      if (savedLanguage && (savedLanguage === 'es' || savedLanguage === 'en')) {
+        setLanguageState(savedLanguage)
+      }
+      setIsLoaded(true)
+    }
+  }, [])
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang)
@@ -24,6 +36,7 @@ export const useLanguage = () => {
     language,
     setLanguage,
     toggleLanguage,
+    isLoaded,
   }
 }
 

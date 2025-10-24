@@ -5,9 +5,11 @@ import { Zap, ArrowRight, Play } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import { Dialog, DialogContent } from '@/components/ui/dialog'
+import { useTranslations } from '@/hooks/use-translations'
 
 const HeroSection = React.memo(() => {
   const [isVideoOpen, setIsVideoOpen] = useState(false)
+  const { t } = useTranslations()
 
   return (
     <section className="min-h-screen bg-black flex items-center justify-center relative overflow-hidden">
@@ -42,37 +44,25 @@ const HeroSection = React.memo(() => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center relative z-20 mt-32 sm:mt-40">
         <div className="scroll-animate opacity-0 translate-y-8">
           <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-white mb-4 sm:mb-6 text-balance">
-            Ahorra tiempo y dinero con{" "}
-            <span className="relative inline-block">
-              <span className="absolute inset-0 bg-gradient-to-r from-opptim-green via-opptim-turquoise to-opptim-blue opacity-40 blur-md">
-                agentes de IA
-              </span>
-              <span className="relative bg-gradient-to-r from-opptim-green via-opptim-turquoise to-opptim-blue bg-clip-text text-transparent" style={{ 
-                textShadow: '0 0 2px rgba(0,255,157,0.8), 0 0 20px rgba(9, 39, 173, 0.6), 0 2px 10px rgba(0,0,0,0.8)',
-                WebkitTextStroke: '1.5px rgba(0,255,157,0.3)'
-              }}>
-                agentes de IA
-              </span>
-            </span>
+            {t('hero.title')}
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-6 sm:mb-8 max-w-3xl mx-auto text-pretty px-4">
-            Automatiza las tareas más repetitivas y tediosas de tu negocio. 
-            <span className="text-opptim-green font-semibold"> Ahorra tiempo y recursos</span> con IA inteligente.
+            {t('hero.subtitle')}
           </p>
 
           <div className="flex flex-wrap justify-center gap-6 sm:gap-8 mb-8 sm:mb-12 text-sm sm:text-base">
             <div className="flex items-center text-gray-300">
               <div className="w-2 h-2 bg-opptim-green rounded-full mr-2"></div>
-              Atención 100% personalizada
+              {t('hero.features.personalized')}
             </div>
             <div className="flex items-center text-gray-300">
               <div className="w-2 h-2 bg-opptim-turquoise rounded-full mr-2"></div>
-              Disponibilidad 24/7
+              {t('hero.features.availability')}
             </div>
             <div className="flex items-center text-gray-300">
               <div className="w-2 h-2 bg-opptim-blue rounded-full mr-2"></div>
-              Resultados 100% garantizados
+              {t('hero.features.guaranteed')}
             </div>
           </div>
 
@@ -82,7 +72,7 @@ const HeroSection = React.memo(() => {
               className="bg-opptim-green hover:bg-opptim-green/90 active:bg-opptim-green/80 text-black font-medium px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg w-full sm:w-auto touch-target"
               onClick={() => window.open('https://wa.me/34633572877', '_blank')}
             >
-              💬 Contactar por WhatsApp
+              💬 {t('hero.cta')}
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
             </Button>
             <Button
@@ -92,7 +82,7 @@ const HeroSection = React.memo(() => {
               onClick={() => setIsVideoOpen(true)}
             >
               <Play className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-              Ver Demo del Chatbot
+              {t('hero.secondaryCta')}
             </Button>
           </div>
         </div>
