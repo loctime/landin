@@ -79,21 +79,51 @@ const AgentsSection = React.memo(() => {
           
           {/* Efectos de líneas estáticas tecnológicas */}
           <div className="absolute inset-0 pointer-events-none">
-            {/* Líneas verticales decorativas */}
+            {/* Líneas verticales decorativas - Centro */}
             <div className="absolute left-1/4 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-cyan-300/30 to-transparent"></div>
             <div className="absolute left-3/4 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-cyan-300/30 to-transparent"></div>
             <div className="absolute left-1/6 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-blue-400/20 to-transparent"></div>
             <div className="absolute left-5/6 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-blue-400/20 to-transparent"></div>
             
-            {/* Líneas horizontales decorativas */}
+            {/* Líneas verticales en los bordes */}
+            <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-cyan-400/40 to-transparent"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-cyan-400/40 to-transparent"></div>
+            <div className="absolute left-1/12 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-blue-300/25 to-transparent"></div>
+            <div className="absolute right-1/12 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-blue-300/25 to-transparent"></div>
+            
+            {/* Líneas horizontales decorativas - Centro */}
             <div className="absolute top-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-300/30 to-transparent"></div>
             <div className="absolute top-3/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-300/30 to-transparent"></div>
             <div className="absolute top-1/6 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/20 to-transparent"></div>
             <div className="absolute top-5/6 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/20 to-transparent"></div>
             
+            {/* Líneas horizontales en los bordes */}
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent"></div>
+            <div className="absolute top-1/12 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-300/25 to-transparent"></div>
+            <div className="absolute bottom-1/12 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-300/25 to-transparent"></div>
+            
             {/* Líneas diagonales sutiles */}
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent transform rotate-12 origin-left"></div>
             <div className="absolute bottom-0 right-0 w-full h-px bg-gradient-to-l from-transparent via-cyan-400/10 to-transparent transform -rotate-12 origin-right"></div>
+            
+            {/* Líneas diagonales en las esquinas */}
+            <div className="absolute top-0 left-0 w-1/3 h-px bg-gradient-to-r from-transparent via-cyan-300/20 to-transparent transform rotate-45 origin-left"></div>
+            <div className="absolute top-0 right-0 w-1/3 h-px bg-gradient-to-l from-transparent via-cyan-300/20 to-transparent transform -rotate-45 origin-right"></div>
+            <div className="absolute bottom-0 left-0 w-1/3 h-px bg-gradient-to-r from-transparent via-blue-300/20 to-transparent transform -rotate-45 origin-left"></div>
+            <div className="absolute bottom-0 right-0 w-1/3 h-px bg-gradient-to-l from-transparent via-blue-300/20 to-transparent transform rotate-45 origin-right"></div>
+            
+            {/* Líneas verticales cortas en los costados */}
+            <div className="absolute left-2 top-1/3 bottom-1/3 w-px bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent"></div>
+            <div className="absolute right-2 top-1/3 bottom-1/3 w-px bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent"></div>
+            <div className="absolute left-4 top-1/4 bottom-1/4 w-px bg-gradient-to-b from-transparent via-blue-300/25 to-transparent"></div>
+            <div className="absolute right-4 top-1/4 bottom-1/4 w-px bg-gradient-to-b from-transparent via-blue-300/25 to-transparent"></div>
+            
+            {/* Líneas horizontales cortas arriba y abajo */}
+            <div className="absolute top-2 left-1/3 right-1/3 h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent"></div>
+            <div className="absolute bottom-2 left-1/3 right-1/3 h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent"></div>
+            <div className="absolute top-4 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-blue-300/25 to-transparent"></div>
+            <div className="absolute bottom-4 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-blue-300/25 to-transparent"></div>
           </div>
           
           {/* Grid 2x2 con diseño profesional */}
@@ -117,8 +147,8 @@ const AgentsSection = React.memo(() => {
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.1),transparent_50%)]"></div>
               
-              <h3 className="text-3xl font-semibold text-white mb-4 relative z-10 tracking-wide">Chatbot</h3>
-              <p className="text-cyan-200/80 text-lg leading-relaxed relative z-10 font-light">
+              <h3 className="text-4xl font-bold text-white mb-6 relative z-10 tracking-wide drop-shadow-lg">Chatbot</h3>
+              <p className="text-cyan-100 text-xl leading-relaxed relative z-10 font-medium">
                 Atiende consultas, manda control semanal de las métricas, agenda citas y responde preguntas en cualquier momento.
               </p>
             </motion.div>
@@ -137,8 +167,8 @@ const AgentsSection = React.memo(() => {
               <div className="absolute inset-0 bg-gradient-to-bl from-emerald-400/10 via-transparent to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(16,185,129,0.1),transparent_50%)]"></div>
               
-              <h3 className="text-3xl font-semibold text-white mb-4 relative z-10 tracking-wide">Asistente financiero</h3>
-              <p className="text-cyan-200/80 text-lg leading-relaxed relative z-10 font-light">
+              <h3 className="text-4xl font-bold text-white mb-6 relative z-10 tracking-wide drop-shadow-lg">Asistente financiero</h3>
+              <p className="text-cyan-100 text-xl leading-relaxed relative z-10 font-medium">
                 Gestiona y recuerda pagos para los clientes. De forma automática. Crea un panel de control para dejar registro de todo.
               </p>
             </motion.div>
@@ -157,8 +187,8 @@ const AgentsSection = React.memo(() => {
               <div className="absolute inset-0 bg-gradient-to-tr from-purple-400/10 via-transparent to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_80%,rgba(147,51,234,0.1),transparent_50%)]"></div>
               
-              <h3 className="text-3xl font-semibold text-white mb-4 relative z-10 tracking-wide">Asistente llamada</h3>
-              <p className="text-cyan-200/80 text-lg leading-relaxed relative z-10 font-light">
+              <h3 className="text-4xl font-bold text-white mb-6 relative z-10 tracking-wide drop-shadow-lg">Asistente llamada</h3>
+              <p className="text-cyan-100 text-xl leading-relaxed relative z-10 font-medium">
                 Asistente telefónico que confirma citas, responde dudas simples y deriva llamadas según la necesidad. Activo 24/7.
               </p>
             </motion.div>
@@ -177,8 +207,8 @@ const AgentsSection = React.memo(() => {
               <div className="absolute inset-0 bg-gradient-to-tl from-orange-400/10 via-transparent to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(251,146,60,0.1),transparent_50%)]"></div>
               
-              <h3 className="text-3xl font-semibold text-white mb-4 relative z-10 tracking-wide">Asistente recordatorio</h3>
-              <p className="text-cyan-200/80 text-lg leading-relaxed relative z-10 font-light">
+              <h3 className="text-4xl font-bold text-white mb-6 relative z-10 tracking-wide drop-shadow-lg">Asistente recordatorio</h3>
+              <p className="text-cyan-100 text-xl leading-relaxed relative z-10 font-medium">
                 Recordatorios automáticos por WhatsApp, SMS o email para reducir ausencias y mantener la agenda organizada.
               </p>
             </motion.div>
