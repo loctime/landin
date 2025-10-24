@@ -148,9 +148,8 @@ const AgentsSection = React.memo(() => {
                   {/* Avatar con animaciones */}
                   <motion.div
                     whileHover={{
-                      scale: 1.2,
-                      rotate: [0, -8, 8, 0],
-                      transition: { duration: 0.5 },
+                      scale: 1.1,
+                      transition: { duration: 0.3, ease: "easeOut" },
                     }}
                     className="relative mb-4 mx-auto"
                   >
