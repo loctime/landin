@@ -103,12 +103,12 @@ const ProcessSection = React.memo(() => {
             <span className="text-emerald-400 text-sm font-medium">Proceso de Automatización</span>
           </motion.div>
           
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
             <span className="bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
               Instala IA en tu negocio
             </span>
           </h2>
-          <p className="text-3xl font-semibold text-white mb-6">
+          <p className="text-2xl sm:text-3xl font-semibold text-white mb-4 sm:mb-6">
             en solo 3 pasos
           </p>
         </motion.div>
@@ -125,7 +125,7 @@ const ProcessSection = React.memo(() => {
           <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500/40 via-blue-500/40 to-purple-500/40 transform -translate-y-1/2 z-0" />
           <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400 transform -translate-y-1/2 z-0" />
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {/* Paso 1: IDENTIFICAR */}
             <motion.div variants={stepVariants} className="relative">
               <motion.div
@@ -138,7 +138,7 @@ const ProcessSection = React.memo(() => {
                   1
                 </div>
                 
-                <Card className="bg-gradient-to-br from-gray-900/90 to-gray-800/50 border border-emerald-500/30 p-6 h-full backdrop-blur-sm hover:border-emerald-500/60 transition-all duration-500 hover:shadow-lg hover:shadow-emerald-500/20">
+                <Card className="bg-gradient-to-br from-gray-900/90 to-gray-800/50 border border-emerald-500/30 p-4 sm:p-6 h-full backdrop-blur-sm hover:border-emerald-500/60 transition-all duration-500 hover:shadow-lg hover:shadow-emerald-500/20">
                   {/* Visualización del paso - Más compacta */}
                   <div className="mb-6 relative">
                     <div className="w-full h-32 bg-gradient-to-br from-emerald-900/40 to-emerald-800/30 rounded-xl border border-emerald-500/30 flex items-center justify-center relative overflow-hidden">
@@ -177,10 +177,10 @@ const ProcessSection = React.memo(() => {
                   
                   <div className="space-y-3">
                     <div className="flex items-center gap-2">
-                      <Brain className="w-5 h-5 text-emerald-400" />
-                      <h3 className="text-xl font-bold text-white">IDENTIFICAR</h3>
+                      <Brain className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400" />
+                      <h3 className="text-lg sm:text-xl font-bold text-white">IDENTIFICAR</h3>
                     </div>
-                    <p className="text-gray-300 text-sm leading-relaxed">
+                    <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
                       Analizamos tus procesos actuales para detectar ineficiencias, cuellos de botella y oportunidades de automatización.
                     </p>
                     <div className="flex flex-wrap gap-1.5">
@@ -208,7 +208,7 @@ const ProcessSection = React.memo(() => {
                   2
                 </div>
                 
-                <Card className="bg-gradient-to-br from-gray-900/90 to-gray-800/50 border border-blue-500/30 p-6 h-full backdrop-blur-sm hover:border-blue-500/60 transition-all duration-500 hover:shadow-lg hover:shadow-blue-500/20">
+                <Card className="bg-gradient-to-br from-gray-900/90 to-gray-800/50 border border-blue-500/30 p-4 sm:p-6 h-full backdrop-blur-sm hover:border-blue-500/60 transition-all duration-500 hover:shadow-lg hover:shadow-blue-500/20">
                   {/* Visualización del paso - Más compacta */}
                   <div className="mb-6 relative">
                     <div className="w-full h-32 bg-gradient-to-br from-blue-900/40 to-purple-800/30 rounded-xl border border-blue-500/30 p-4 font-mono text-xs relative overflow-hidden">
@@ -286,10 +286,10 @@ const ProcessSection = React.memo(() => {
                   
                   <div className="space-y-3">
                     <div className="flex items-center gap-2">
-                      <Code className="w-5 h-5 text-blue-400" />
-                      <h3 className="text-xl font-bold text-white">DISEÑAR</h3>
+                      <Code className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400" />
+                      <h3 className="text-lg sm:text-xl font-bold text-white">DISEÑAR</h3>
                     </div>
-                    <p className="text-gray-300 text-sm leading-relaxed">
+                    <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
                       Creamos la arquitectura de tu sistema de IA, diseñando flujos inteligentes adaptados a tu infraestructura.
                     </p>
                     <div className="flex flex-wrap gap-1.5">
@@ -317,7 +317,7 @@ const ProcessSection = React.memo(() => {
                   3
                 </div>
                 
-                <Card className="bg-gradient-to-br from-gray-900/90 to-gray-800/50 border border-purple-500/30 p-6 h-full backdrop-blur-sm hover:border-purple-500/60 transition-all duration-500 hover:shadow-lg hover:shadow-purple-500/20">
+                <Card className="bg-gradient-to-br from-gray-900/90 to-gray-800/50 border border-purple-500/30 p-4 sm:p-6 h-full backdrop-blur-sm hover:border-purple-500/60 transition-all duration-500 hover:shadow-lg hover:shadow-purple-500/20">
                   {/* Visualización del paso - Más compacta */}
                   <div className="mb-6 relative">
                     <div className="w-full h-32 bg-gradient-to-br from-purple-900/40 to-pink-800/30 rounded-xl border border-purple-500/30 flex items-center justify-center relative overflow-hidden">
@@ -397,10 +397,10 @@ const ProcessSection = React.memo(() => {
                   
                   <div className="space-y-3">
                     <div className="flex items-center gap-2">
-                      <Rocket className="w-5 h-5 text-purple-400" />
-                      <h3 className="text-xl font-bold text-white">AUTOMATIZAR</h3>
+                      <Rocket className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400" />
+                      <h3 className="text-lg sm:text-xl font-bold text-white">AUTOMATIZAR</h3>
                     </div>
-                    <p className="text-gray-300 text-sm leading-relaxed">
+                    <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
                       Implementamos y desplegamos tu sistema de automatización, integrándolo perfectamente en tu flujo de trabajo.
                     </p>
                     <div className="flex flex-wrap gap-1.5">

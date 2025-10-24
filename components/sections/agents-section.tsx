@@ -61,7 +61,7 @@ const AgentsSection = React.memo(() => {
             <span className="text-36D6E6 text-base font-medium">{t('agents.poweredBy')}</span>
           </motion.div>
 
-          <h2 className="elegant-title text-4xl sm:text-5xl md:text-6xl text-white mb-6">
+          <h2 className="elegant-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-4 sm:mb-6">
             Nuestros <span className="bg-gradient-to-r from-blue-600 via-teal-500 to-cyan-400 bg-clip-text text-transparent">agentes</span>
           </h2>
         </motion.div>
@@ -127,11 +127,11 @@ const AgentsSection = React.memo(() => {
           </div>
           
           {/* Grid 2x2 con diseño profesional */}
-          <div className="grid grid-cols-2 gap-0 relative">
-            {/* Línea vertical central con efecto glow */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-cyan-400 to-transparent transform -translate-x-1/2 opacity-60"></div>
-            {/* Línea horizontal central con efecto glow */}
-            <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent transform -translate-y-1/2 opacity-60"></div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 relative">
+            {/* Línea vertical central con efecto glow - Solo en desktop */}
+            <div className="hidden sm:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-cyan-400 to-transparent transform -translate-x-1/2 opacity-60"></div>
+            {/* Línea horizontal central con efecto glow - Solo en desktop */}
+            <div className="hidden sm:block absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent transform -translate-y-1/2 opacity-60"></div>
             
             {/* Cuadrante 1: Chatbot */}
             <motion.div
@@ -140,15 +140,15 @@ const AgentsSection = React.memo(() => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
               whileHover={{ scale: 1.02, y: -5 }}
-              className="p-8 relative group border-r border-b border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300"
+              className="p-4 sm:p-6 lg:p-8 relative group border-r-0 sm:border-r border-b border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300"
             >
               {/* Fondo con gradiente y patrón */}
               <div className="absolute inset-0 bg-gradient-to-br from-slate-800/40 via-slate-900/60 to-slate-800/40 rounded-lg"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.1),transparent_50%)]"></div>
               
-              <h3 className="text-4xl font-bold text-white mb-6 relative z-10 tracking-wide drop-shadow-lg">Chatbot</h3>
-              <p className="text-cyan-100 text-xl leading-relaxed relative z-10 font-medium">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6 relative z-10 tracking-wide drop-shadow-lg">Chatbot</h3>
+              <p className="text-cyan-100 text-base sm:text-lg lg:text-xl leading-relaxed relative z-10 font-medium">
                 Atiende consultas, manda control semanal de las métricas, agenda citas y responde preguntas en cualquier momento.
               </p>
             </motion.div>
@@ -160,15 +160,15 @@ const AgentsSection = React.memo(() => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
               whileHover={{ scale: 1.02, y: -5 }}
-              className="p-8 relative group border-b border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300"
+              className="p-4 sm:p-6 lg:p-8 relative group border-b border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300"
             >
               {/* Fondo con gradiente y patrón */}
               <div className="absolute inset-0 bg-gradient-to-bl from-slate-800/40 via-slate-900/60 to-slate-800/40 rounded-lg"></div>
               <div className="absolute inset-0 bg-gradient-to-bl from-emerald-400/10 via-transparent to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(16,185,129,0.1),transparent_50%)]"></div>
               
-              <h3 className="text-4xl font-bold text-white mb-6 relative z-10 tracking-wide drop-shadow-lg">Asistente financiero</h3>
-              <p className="text-cyan-100 text-xl leading-relaxed relative z-10 font-medium">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6 relative z-10 tracking-wide drop-shadow-lg">Asistente financiero</h3>
+              <p className="text-cyan-100 text-base sm:text-lg lg:text-xl leading-relaxed relative z-10 font-medium">
                 Gestiona y recuerda pagos para los clientes. De forma automática. Crea un panel de control para dejar registro de todo.
               </p>
             </motion.div>
@@ -180,15 +180,15 @@ const AgentsSection = React.memo(() => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
               whileHover={{ scale: 1.02, y: -5 }}
-              className="p-8 relative group border-r border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300"
+              className="p-4 sm:p-6 lg:p-8 relative group border-r-0 sm:border-r border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300"
             >
               {/* Fondo con gradiente y patrón */}
               <div className="absolute inset-0 bg-gradient-to-tr from-slate-800/40 via-slate-900/60 to-slate-800/40 rounded-lg"></div>
               <div className="absolute inset-0 bg-gradient-to-tr from-purple-400/10 via-transparent to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_80%,rgba(147,51,234,0.1),transparent_50%)]"></div>
               
-              <h3 className="text-4xl font-bold text-white mb-6 relative z-10 tracking-wide drop-shadow-lg">Asistente llamada</h3>
-              <p className="text-cyan-100 text-xl leading-relaxed relative z-10 font-medium">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6 relative z-10 tracking-wide drop-shadow-lg">Asistente llamada</h3>
+              <p className="text-cyan-100 text-base sm:text-lg lg:text-xl leading-relaxed relative z-10 font-medium">
                 Asistente telefónico que confirma citas, responde dudas simples y deriva llamadas según la necesidad. Activo 24/7.
               </p>
             </motion.div>
@@ -200,15 +200,15 @@ const AgentsSection = React.memo(() => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
               whileHover={{ scale: 1.02, y: -5 }}
-              className="p-8 relative group hover:border-cyan-400/60 transition-all duration-300"
+              className="p-4 sm:p-6 lg:p-8 relative group hover:border-cyan-400/60 transition-all duration-300"
             >
               {/* Fondo con gradiente y patrón */}
               <div className="absolute inset-0 bg-gradient-to-tl from-slate-800/40 via-slate-900/60 to-slate-800/40 rounded-lg"></div>
               <div className="absolute inset-0 bg-gradient-to-tl from-orange-400/10 via-transparent to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(251,146,60,0.1),transparent_50%)]"></div>
               
-              <h3 className="text-4xl font-bold text-white mb-6 relative z-10 tracking-wide drop-shadow-lg">Asistente recordatorio</h3>
-              <p className="text-cyan-100 text-xl leading-relaxed relative z-10 font-medium">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6 relative z-10 tracking-wide drop-shadow-lg">Asistente recordatorio</h3>
+              <p className="text-cyan-100 text-base sm:text-lg lg:text-xl leading-relaxed relative z-10 font-medium">
                 Recordatorios automáticos por WhatsApp, SMS o email para reducir ausencias y mantener la agenda organizada.
               </p>
             </motion.div>
