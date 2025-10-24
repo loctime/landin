@@ -1,5 +1,4 @@
 import { Metadata } from 'next'
-import { useTranslations } from '@/hooks/use-translations'
 
 export const metadata: Metadata = {
   title: 'Términos y Condiciones - Opptim.Ai',
@@ -13,23 +12,77 @@ export const metadata: Metadata = {
 }
 
 export default function TermsPage() {
-  const t = useTranslations()
-  
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-16 max-w-4xl">
         <div className="prose prose-lg max-w-none">
-          <h1 className="text-4xl font-bold mb-4 text-foreground">{t('terms.title')}</h1>
-          <p className="text-xl text-muted-foreground mb-8">{t('terms.subtitle')}</p>
-          <p className="text-sm text-muted-foreground mb-12 border-b border-border pb-4">{t('terms.lastUpdated')}</p>
+          <h1 className="text-4xl font-bold mb-4 text-foreground">Términos y Condiciones</h1>
+          <p className="text-xl text-muted-foreground mb-8">Condiciones de uso de nuestros servicios</p>
+          <p className="text-sm text-muted-foreground mb-12 border-b border-border pb-4">Última actualización: Diciembre 2024</p>
           
           <div className="space-y-8">
-            {Object.entries(t('terms.sections')).map(([key, section]) => (
-              <div key={key} className="bg-card p-6 rounded-lg border border-border">
-                <h2 className="text-2xl font-semibold mb-4 text-foreground">{section.title}</h2>
-                <p className="text-muted-foreground leading-relaxed">{section.content}</p>
-              </div>
-            ))}
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <h2 className="text-2xl font-semibold mb-4 text-foreground">1. Aceptación de los Términos</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Al acceder y utilizar los servicios de Opptim.Ai, usted acepta estar sujeto a estos Términos y Condiciones. Si no está de acuerdo con alguna parte de estos términos, no debe utilizar nuestros servicios.
+              </p>
+            </div>
+
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <h2 className="text-2xl font-semibold mb-4 text-foreground">2. Descripción de los Servicios</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Opptim.Ai proporciona servicios de automatización empresarial mediante agentes de inteligencia artificial, incluyendo chatbots, sistemas de recordatorios, gestión de citas y otras soluciones de automatización personalizadas.
+              </p>
+            </div>
+
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <h2 className="text-2xl font-semibold mb-4 text-foreground">3. Obligaciones del Usuario</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                El usuario se compromete a: proporcionar información veraz y actualizada, utilizar los servicios de manera responsable y conforme a la ley, no interferir con el funcionamiento de nuestros sistemas, y mantener la confidencialidad de sus credenciales de acceso.
+              </p>
+            </div>
+
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <h2 className="text-2xl font-semibold mb-4 text-foreground">4. Pagos y Facturación</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Los precios de nuestros servicios están claramente especificados. Los pagos se realizan según los términos acordados en el contrato de servicio. Los precios pueden estar sujetos a cambios con notificación previa de 30 días.
+              </p>
+            </div>
+
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <h2 className="text-2xl font-semibold mb-4 text-foreground">5. Propiedad Intelectual</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Todos los derechos de propiedad intelectual sobre nuestros servicios, incluyendo software, algoritmos y contenido, pertenecen a Opptim.Ai. El usuario no adquiere derechos de propiedad sobre nuestros sistemas.
+              </p>
+            </div>
+
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <h2 className="text-2xl font-semibold mb-4 text-foreground">6. Limitación de Responsabilidad</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Opptim.Ai no será responsable por daños indirectos, incidentales o consecuenciales. Nuestra responsabilidad se limita al valor de los servicios contratados en el período de 12 meses anteriores al evento que origine la reclamación.
+              </p>
+            </div>
+
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <h2 className="text-2xl font-semibold mb-4 text-foreground">7. Terminación</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Cualquiera de las partes puede terminar el acuerdo con notificación previa de 30 días. Al terminar, el usuario debe cesar el uso de nuestros servicios y sus datos serán eliminados en 90 días.
+              </p>
+            </div>
+
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <h2 className="text-2xl font-semibold mb-4 text-foreground">8. Modificaciones</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Nos reservamos el derecho de modificar estos términos en cualquier momento. Las modificaciones entrarán en vigor al ser publicadas en nuestro sitio web con 30 días de antelación.
+              </p>
+            </div>
+
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <h2 className="text-2xl font-semibold mb-4 text-foreground">9. Contacto</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Para cualquier consulta sobre estos Términos y Condiciones, puede contactarnos en: info@opptim.ai
+              </p>
+            </div>
           </div>
           
           <div className="mt-12 p-6 bg-muted/50 rounded-lg border border-border">
