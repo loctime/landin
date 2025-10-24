@@ -39,12 +39,7 @@ const FormField = <
       <Controller {...props} />
     </FormFieldContext.Provider>
   )
-}) as <
-  TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
->(
-  props: ControllerProps<TFieldValues, TName>
-) => React.ReactElement
+}
 
 FormField.displayName = 'FormField'
 

@@ -70,7 +70,7 @@ export function useSidebarState({
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [toggleSidebar])
 
-  const state = open ? 'expanded' : 'collapsed'
+  const state: 'expanded' | 'collapsed' = open ? 'expanded' : 'collapsed'
 
   return useMemo(
     () => ({

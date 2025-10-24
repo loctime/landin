@@ -11,7 +11,7 @@ export function useChartColors(config: ChartConfig) {
   return useMemo(() => {
     return Object.entries(config).reduce((acc, [key, itemConfig]) => {
       if (itemConfig.theme || itemConfig.color) {
-        acc[key] = itemConfig.color || itemConfig.theme
+        acc[key] = (itemConfig.color || itemConfig.theme) as string | Record<string, string>
       }
       return acc
     }, {} as Record<string, string | Record<string, string>>)

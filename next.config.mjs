@@ -73,8 +73,6 @@ const nextConfig = {
     // Tree shaking optimizations
     config.resolve.alias = {
       ...config.resolve.alias,
-      // Optimize imports
-      '@/lib/optimized-imports': '@/lib/optimized-imports',
     }
     
     // Optimize bundle size

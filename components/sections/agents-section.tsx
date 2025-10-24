@@ -66,7 +66,7 @@ const AgentsSection = React.memo(() => {
           </h2>
         </motion.div>
 
-        {/* Layout con grid de agentes y video */}
+        {/* Layout con grid de agentes */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -74,11 +74,8 @@ const AgentsSection = React.memo(() => {
           transition={{ duration: 0.8 }}
           className="max-w-7xl mx-auto relative"
         >
-          {/* Layout responsive: grid + video */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            
-            {/* Grid 2x2 profesional y tecnológico */}
-            <div className="relative">
+          {/* Grid 2x2 profesional y tecnológico */}
+          <div className="relative">
           {/* Línea horizontal separadora con efecto glow */}
           <div className="w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent mb-12 opacity-60"></div>
           
@@ -218,67 +215,6 @@ const AgentsSection = React.memo(() => {
               </p>
             </motion.div>
           </div>
-            </div>
-
-            {/* Sección del video demo */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
-            >
-              {/* Contenedor del video con efectos */}
-              <div className="relative group">
-                {/* Efectos de fondo para el video */}
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/20 via-transparent to-blue-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                <div className="absolute inset-0 bg-gradient-to-tr from-purple-400/10 via-transparent to-teal-500/10 rounded-2xl"></div>
-                
-                {/* Video container */}
-                <div className="relative bg-slate-900/50 backdrop-blur-sm rounded-2xl p-4 border border-cyan-400/30 group-hover:border-cyan-400/60 transition-all duration-300">
-                  <div className="aspect-video rounded-xl overflow-hidden bg-slate-800/50">
-                    <video
-                      className="w-full h-full object-cover"
-                      controls
-                      preload="metadata"
-                      poster="/placeholder.jpg"
-                    >
-                      <source src="/demo chatbot.mp4" type="video/mp4" />
-                      Tu navegador no soporta el elemento de video.
-                    </video>
-                  </div>
-                  
-                  {/* Overlay con información del video */}
-                  <div className="absolute top-6 left-6 right-6 z-10">
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-                      <span className="text-white text-sm font-medium">Demo en vivo</span>
-                    </div>
-                    <h3 className="text-white text-lg font-semibold">Chatbot en acción</h3>
-                  </div>
-                  
-                  {/* Efectos de brillo en las esquinas */}
-                  <div className="absolute top-0 left-0 w-8 h-8 bg-gradient-to-br from-cyan-400/30 to-transparent rounded-tl-2xl"></div>
-                  <div className="absolute top-0 right-0 w-8 h-8 bg-gradient-to-bl from-blue-400/30 to-transparent rounded-tr-2xl"></div>
-                  <div className="absolute bottom-0 left-0 w-8 h-8 bg-gradient-to-tr from-teal-400/30 to-transparent rounded-bl-2xl"></div>
-                  <div className="absolute bottom-0 right-0 w-8 h-8 bg-gradient-to-tl from-purple-400/30 to-transparent rounded-br-2xl"></div>
-                </div>
-              </div>
-              
-              {/* Texto descriptivo debajo del video */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="mt-6 text-center lg:text-left"
-              >
-                <h4 className="text-xl font-semibold text-white mb-2">Ve nuestro chatbot en acción</h4>
-                <p className="text-cyan-100 text-sm leading-relaxed">
-                  Descubre cómo nuestros agentes automatizan tu negocio con inteligencia artificial avanzada.
-                </p>
-              </motion.div>
-            </motion.div>
           </div>
         </motion.div>
       </div>
