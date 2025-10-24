@@ -11,19 +11,18 @@ const HeroSection = React.memo(() => {
 
   return (
     <section className="min-h-screen bg-black flex items-center justify-center relative overflow-hidden">
-      {/* GIF de fondo */}
+      {/* Video de fondo */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="relative w-full h-full scale-[1.00]">
-          <Image 
-            src="/ultimo.gif" 
-            alt="Background" 
-            fill
-            className="object-contain opacity-50"
-            priority
-            unoptimized
-            style={{ filter: 'blur(1px) brightness(1.3) contrast(1.15) saturate(1.2) drop-shadow(0 0 40px rgba(0, 200, 255, 0.6)) drop-shadow(0 0 80px rgba(0, 180, 255, 0.4))' }}
-          />
-        </div>
+        <video 
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-contain opacity-50 scale-100"
+          style={{ filter: 'brightness(1.2) contrast(1.1) saturate(1.1)' }}
+        >
+          <source src="/robotaso.mp4" type="video/mp4" />
+        </video>
         {/* Overlay oscuro para mejor legibilidad */}
         <div className="absolute inset-0 bg-black/25" />
       </div>
@@ -34,7 +33,7 @@ const HeroSection = React.memo(() => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-opptim-turquoise/10 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center relative z-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center relative z-20 mt-32 sm:mt-40">
         <div className="scroll-animate opacity-0 translate-y-8">
           <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-white mb-4 sm:mb-6 text-balance">
             Ahorra tiempo y dinero con{" "}

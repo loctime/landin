@@ -4,6 +4,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { stats } from '@/data/homepage-data'
 import { Sparkles } from 'lucide-react'
+import { Particles } from '@/components/ui/particles'
 
 const StatsSection = React.memo(() => {
   const colors = [
@@ -15,9 +16,14 @@ const StatsSection = React.memo(() => {
   
   return (
     <section className="py-16 sm:py-24 bg-gradient-to-r from-gray-900 to-black border-y border-opptim-green/20 relative overflow-hidden">
-      {/* Efectos de fondo */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-opptim-green/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-opptim-turquoise/5 rounded-full blur-3xl" />
+      {/* Efectos de fondo con partículas */}
+      <Particles
+        color="#00ff9d"
+        particleCount={5000}
+        particleSize={8}
+        animate={false}
+        className="absolute inset-0 opacity-60"
+      />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
