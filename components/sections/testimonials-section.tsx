@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Star, ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react'
+import { Star, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Card } from '@/components/ui/card'
 import { testimonials } from '@/data/homepage-data'
 import { useTranslations } from '@/hooks/use-translations'
@@ -29,15 +29,6 @@ const TestimonialsSection = React.memo(() => {
     setExpandedCards(new Set([index]))
   }
 
-  const toggleExpanded = (index: number) => {
-    const newExpanded = new Set(expandedCards)
-    if (newExpanded.has(index)) {
-      newExpanded.delete(index)
-    } else {
-      newExpanded.add(index)
-    }
-    setExpandedCards(newExpanded)
-  }
 
   const truncateText = (text: string, maxLength: number) => {
     return text.length > maxLength ? text.substring(0, maxLength) + '...' : text
@@ -116,7 +107,6 @@ const TestimonialsSection = React.memo(() => {
               const isExpanded = expandedCards.has(index)
               const isSelected = index === currentIndex
               const maxLength = isSelected ? 120 : 60
-              const shouldTruncate = testimonial.text.length > maxLength
               
               return (
                 <div
@@ -150,22 +140,6 @@ const TestimonialsSection = React.memo(() => {
                         }`}>
                           "{isExpanded ? testimonial.text : truncateText(testimonial.text, maxLength)}"
                         </blockquote>
-
-                        {/* Ver más button for long text */}
-                        {shouldTruncate && (
-                          <button
-                            onClick={(e) => {
-                              e.stopPropagation()
-                              toggleExpanded(index)
-                            }}
-                            className="w-full flex items-center justify-center gap-1 text-cyan-400 hover:text-cyan-300 text-xs mt-2 transition-colors"
-                          >
-                            {isExpanded ? 'Ver menos' : 'Ver más'}
-                            <ChevronDown className={`w-2 h-2 transition-transform ${
-                              isExpanded ? 'rotate-180' : ''
-                            }`} />
-                          </button>
-                        )}
                       </div>
 
                       {/* Author info and result */}
