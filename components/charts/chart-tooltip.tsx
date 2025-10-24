@@ -7,12 +7,14 @@ import { useChart } from '@/components/ui/chart'
 
 const ChartTooltip = RechartsPrimitive.Tooltip
 
-interface ChartTooltipContentProps extends React.ComponentProps<typeof RechartsPrimitive.Tooltip>, React.ComponentProps<'div'> {
+interface ChartTooltipContentProps extends Omit<React.ComponentProps<typeof RechartsPrimitive.Tooltip>, 'content'> {
   hideLabel?: boolean
   hideIndicator?: boolean
   indicator?: 'line' | 'dot' | 'dashed'
   nameKey?: string
   labelKey?: string
+  className?: string
+  color?: string
 }
 
 const ChartTooltipContent = React.memo<ChartTooltipContentProps>(({
