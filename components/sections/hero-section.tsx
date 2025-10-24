@@ -12,19 +12,25 @@ const HeroSection = React.memo(() => {
   return (
     <section className="min-h-screen bg-black flex items-center justify-center relative overflow-hidden">
       {/* Video de fondo */}
-      <div className="absolute inset-0 flex items-center justify-center">
+      <div className="absolute inset-0 flex items-end justify-center overflow-hidden">
         <video 
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-contain opacity-50 scale-100"
-          style={{ filter: 'brightness(1.2) contrast(1.1) saturate(1.1)' }}
+          preload="auto"
+          className="w-auto h-[85%] object-contain opacity-65"
+          style={{ 
+            filter: 'brightness(1.4) contrast(1.2) saturate(1.4)',
+            objectPosition: 'center bottom'
+          }}
         >
           <source src="/robotaso.mp4" type="video/mp4" />
+          {/* Fallback para navegadores que no soporten video */}
+          Tu navegador no soporta videos HTML5.
         </video>
         {/* Overlay oscuro para mejor legibilidad */}
-        <div className="absolute inset-0 bg-black/25" />
+        <div className="absolute inset-0 bg-black/20" />
       </div>
 
       {/* Efectos de fondo adicionales */}
