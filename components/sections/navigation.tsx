@@ -15,11 +15,12 @@ const Navigation = React.memo(() => {
   const { isScrollingDown, isAtTop } = useScroll()
 
   return (
-    <nav className="elegant-nav fixed top-0 w-full z-50 transition-all duration-300 ease-in-out">
-      <div className={`elegant-container transition-all duration-300 ease-in-out ${
-        isScrollingDown && !isAtTop ? 'py-2' : 'py-4'
-      }`}>
-        <div className="flex items-center justify-between">
+    <nav className={`elegant-nav fixed top-0 w-full z-50 transition-all duration-300 ease-in-out ${
+      isScrollingDown && !isAtTop ? 'navbar-scrolled' : 'navbar-normal'
+    }`}>
+      {/* Enlaces en la parte superior */}
+      <div className="elegant-container py-2">
+        <div className="flex items-start justify-between pt-4">
           <div className="flex items-center space-x-2">
             <a 
               href="#inicio" 

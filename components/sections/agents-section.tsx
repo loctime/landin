@@ -62,11 +62,8 @@ const AgentsSection = React.memo(() => {
           </motion.div>
 
           <h2 className="elegant-title text-4xl sm:text-5xl md:text-6xl text-white mb-6">
-            {t('agents.title')}
+            Nuestros <span className="bg-gradient-to-r from-blue-600 via-teal-500 to-cyan-400 bg-clip-text text-transparent">agentes</span>
           </h2>
-          <p className="elegant-subtitle text-gray-300 text-xl max-w-3xl mx-auto">
-            {t('agents.subtitle')}
-          </p>
         </motion.div>
 
         {/* Elegant 2x2 Grid */}

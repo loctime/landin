@@ -289,8 +289,13 @@ html {
 
 /* Elegant Background Gradients */
 .elegant-gradient {
-  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  background: 
+    /* Imagen de fondo con degradado horizontal y líneas verticales */
+    url('/2fondo2.png') center center / cover no-repeat,
+    /* Fallback degradado azul oscuro */
+    linear-gradient(135deg, #0a0a1a 0%, #0f1419 30%, #1a2332 70%, #0f0f23 100%);
 }
+
 
 .elegant-gradient-subtle {
   background: linear-gradient(180deg, #0f0f23 0%, #1a1a2e 100%);
@@ -369,6 +374,116 @@ html {
   background: rgba(15, 15, 35, 0.95);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(54, 214, 230, 0.1);
+  min-height: 100px; /* Aumentar altura mínima del navbar */
+}
+
+/* Efecto de achique del navbar al hacer scroll */
+.elegant-nav.navbar-normal {
+  min-height: 100px;
+}
+
+.elegant-nav.navbar-scrolled {
+  min-height: 70px;
+  background: rgba(15, 15, 35, 0.98);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación suave para el logo al hacer scroll */
+.elegant-nav.navbar-scrolled .elegant-title {
+  font-size: 1.5rem;
+}
+
+.elegant-nav.navbar-normal .elegant-title {
+  font-size: 1.875rem;
+}
+
+/* Navbar más grande */
+.elegant-nav .elegant-container {
+  padding: 30px 24px; /* Aumentar padding vertical significativamente */
+}
+
+/* Padding adaptativo para el efecto de scroll */
+.elegant-nav.navbar-normal .elegant-container {
+  padding: 30px 24px;
+}
+
+.elegant-nav.navbar-scrolled .elegant-container {
+  padding: 15px 24px;
+}
+
+/* Logo más hacia el costado izquierdo */
+.elegant-nav .flex.items-center.justify-between > div:first-child {
+  margin-left: -10px; /* Mover logo más hacia la izquierda */
+}
+
+/* Logo más grande */
+.elegant-nav .elegant-title {
+  font-size: 1.875rem; /* Aumentar tamaño del logo */
+  line-height: 1.2;
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover sutil para el logo */
+.elegant-nav .elegant-title:hover {
+  transform: scale(1.02);
+  text-shadow: 0 0 6px rgba(54, 214, 230, 0.2);
+}
+
+/* Enlaces de navegación más grandes */
+.elegant-nav a {
+  font-size: 1.125rem; /* Aumentar tamaño de fuente */
+  font-weight: 500;
+  padding: 8px 16px; /* Aumentar padding de enlaces */
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Efectos hover suaves para enlaces de navegación */
+.elegant-nav a:hover {
+  color: #36D6E6 !important;
+  transform: translateY(-1px);
+  text-shadow: 0 0 4px rgba(54, 214, 230, 0.3);
+}
+
+/* Efecto de línea sutil en hover */
+.elegant-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background: #36D6E6;
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+  opacity: 0.8;
+}
+
+.elegant-nav a:hover::after {
+  width: 80%;
+}
+
+/* Botones más grandes */
+.elegant-nav .elegant-button,
+.elegant-nav .elegant-button-outline {
+  padding: 14px 28px; /* Aumentar padding de botones */
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efectos hover sutiles para botones */
+.elegant-nav .elegant-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+}
+
+.elegant-nav .elegant-button-outline:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(54, 214, 230, 0.2);
+  background: rgba(54, 214, 230, 0.08);
 }
 
 /* Elegant Footer */
@@ -502,4 +617,61 @@ html {
   .elegant-container {
     padding: 0 16px;
   }
+  
+  /* Navbar responsive */
+  .elegant-nav.navbar-normal {
+    min-height: 85px; /* Altura mínima más grande para móvil */
+  }
+  
+  .elegant-nav.navbar-scrolled {
+    min-height: 60px; /* Altura más pequeña al hacer scroll en móvil */
+  }
+  
+  .elegant-nav .elegant-container {
+    padding: 25px 16px; /* Padding más grande para móvil */
+  }
+  
+  .elegant-nav.navbar-normal .elegant-container {
+    padding: 25px 16px;
+  }
+  
+  .elegant-nav.navbar-scrolled .elegant-container {
+    padding: 12px 16px;
+  }
+  
+  /* Logo más hacia el costado en móvil */
+  .elegant-nav .flex.items-center.justify-between > div:first-child {
+    margin-left: -5px; /* Mover logo más hacia la izquierda en móvil */
+  }
+  
+  .elegant-nav .elegant-title {
+    font-size: 1.5rem; /* Tamaño de logo para móvil */
+  }
+  
+  .elegant-nav .elegant-button,
+  .elegant-nav .elegant-button-outline {
+    padding: 10px 20px; /* Botones más pequeños en móvil */
+    font-size: 0.875rem;
+  }
+  
+  /* Efectos hover sutiles para móvil */
+  .elegant-nav a:hover {
+    transform: translateY(-0.5px);
+  }
+  
+  .elegant-nav .elegant-title:hover {
+    transform: scale(1.01);
+  }
+}
+
+/* Efectos hover sutiles para enlaces del menú móvil */
+.elegant-nav .md\\:hidden a {
+  transition: all 0.3s ease;
+}
+
+.elegant-nav .md\\:hidden a:hover {
+  color: #36D6E6 !important;
+  padding-left: 16px;
+  background: rgba(54, 214, 230, 0.03);
+  border-radius: 4px;
 }

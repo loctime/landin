@@ -35,7 +35,7 @@ export const translations = {
     },
     // Agents Section
     agents: {
-      title: 'Nuestros servicios de IA',
+      title: 'Nuestros agentes',
       subtitle: 'Soluciones de automatización inteligente para optimizar tu negocio',
       poweredBy: 'Powered by AI',
       sectors: 'Sectores que confían en nosotros:',
