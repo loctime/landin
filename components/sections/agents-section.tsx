@@ -79,51 +79,51 @@ const AgentsSection = React.memo(() => {
           
           {/* Efectos de líneas estáticas tecnológicas */}
           <div className="absolute inset-0 pointer-events-none">
-            {/* Líneas verticales decorativas - Centro */}
-            <div className="absolute left-1/4 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-cyan-300/30 to-transparent"></div>
-            <div className="absolute left-3/4 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-cyan-300/30 to-transparent"></div>
-            <div className="absolute left-1/6 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-blue-400/20 to-transparent"></div>
-            <div className="absolute left-5/6 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-blue-400/20 to-transparent"></div>
+            {/* Líneas verticales decorativas - Centro - Más sutiles en móvil */}
+            <div className="absolute left-1/4 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-cyan-300/20 sm:via-cyan-300/30 to-transparent"></div>
+            <div className="absolute left-3/4 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-cyan-300/20 sm:via-cyan-300/30 to-transparent"></div>
+            <div className="hidden sm:block absolute left-1/6 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-blue-400/20 to-transparent"></div>
+            <div className="hidden sm:block absolute left-5/6 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-blue-400/20 to-transparent"></div>
             
-            {/* Líneas verticales en los bordes */}
-            <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-cyan-400/40 to-transparent"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-cyan-400/40 to-transparent"></div>
-            <div className="absolute left-1/12 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-blue-300/25 to-transparent"></div>
-            <div className="absolute right-1/12 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-blue-300/25 to-transparent"></div>
+            {/* Líneas verticales en los bordes - Más sutiles en móvil */}
+            <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-cyan-400/20 sm:via-cyan-400/40 to-transparent"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-cyan-400/20 sm:via-cyan-400/40 to-transparent"></div>
+            <div className="hidden sm:block absolute left-1/12 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-blue-300/25 to-transparent"></div>
+            <div className="hidden sm:block absolute right-1/12 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-blue-300/25 to-transparent"></div>
             
-            {/* Líneas horizontales decorativas - Centro */}
-            <div className="absolute top-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-300/30 to-transparent"></div>
-            <div className="absolute top-3/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-300/30 to-transparent"></div>
-            <div className="absolute top-1/6 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/20 to-transparent"></div>
-            <div className="absolute top-5/6 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/20 to-transparent"></div>
+            {/* Líneas horizontales decorativas - Centro - Más sutiles en móvil */}
+            <div className="absolute top-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-300/20 sm:via-cyan-300/30 to-transparent"></div>
+            <div className="absolute top-3/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-300/20 sm:via-cyan-300/30 to-transparent"></div>
+            <div className="hidden sm:block absolute top-1/6 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/20 to-transparent"></div>
+            <div className="hidden sm:block absolute top-5/6 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/20 to-transparent"></div>
             
-            {/* Líneas horizontales en los bordes */}
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent"></div>
-            <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent"></div>
-            <div className="absolute top-1/12 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-300/25 to-transparent"></div>
-            <div className="absolute bottom-1/12 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-300/25 to-transparent"></div>
+            {/* Líneas horizontales en los bordes - Más sutiles en móvil */}
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400/20 sm:via-cyan-400/40 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400/20 sm:via-cyan-400/40 to-transparent"></div>
+            <div className="hidden sm:block absolute top-1/12 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-300/25 to-transparent"></div>
+            <div className="hidden sm:block absolute bottom-1/12 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-300/25 to-transparent"></div>
             
-            {/* Líneas diagonales sutiles */}
-            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent transform rotate-12 origin-left"></div>
-            <div className="absolute bottom-0 right-0 w-full h-px bg-gradient-to-l from-transparent via-cyan-400/10 to-transparent transform -rotate-12 origin-right"></div>
+            {/* Líneas diagonales sutiles - Solo en desktop */}
+            <div className="hidden lg:block absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent transform rotate-12 origin-left"></div>
+            <div className="hidden lg:block absolute bottom-0 right-0 w-full h-px bg-gradient-to-l from-transparent via-cyan-400/10 to-transparent transform -rotate-12 origin-right"></div>
             
-            {/* Líneas diagonales en las esquinas */}
-            <div className="absolute top-0 left-0 w-1/3 h-px bg-gradient-to-r from-transparent via-cyan-300/20 to-transparent transform rotate-45 origin-left"></div>
-            <div className="absolute top-0 right-0 w-1/3 h-px bg-gradient-to-l from-transparent via-cyan-300/20 to-transparent transform -rotate-45 origin-right"></div>
-            <div className="absolute bottom-0 left-0 w-1/3 h-px bg-gradient-to-r from-transparent via-blue-300/20 to-transparent transform -rotate-45 origin-left"></div>
-            <div className="absolute bottom-0 right-0 w-1/3 h-px bg-gradient-to-l from-transparent via-blue-300/20 to-transparent transform rotate-45 origin-right"></div>
+            {/* Líneas diagonales en las esquinas - Solo en desktop */}
+            <div className="hidden lg:block absolute top-0 left-0 w-1/3 h-px bg-gradient-to-r from-transparent via-cyan-300/20 to-transparent transform rotate-45 origin-left"></div>
+            <div className="hidden lg:block absolute top-0 right-0 w-1/3 h-px bg-gradient-to-l from-transparent via-cyan-300/20 to-transparent transform -rotate-45 origin-right"></div>
+            <div className="hidden lg:block absolute bottom-0 left-0 w-1/3 h-px bg-gradient-to-r from-transparent via-blue-300/20 to-transparent transform -rotate-45 origin-left"></div>
+            <div className="hidden lg:block absolute bottom-0 right-0 w-1/3 h-px bg-gradient-to-l from-transparent via-blue-300/20 to-transparent transform rotate-45 origin-right"></div>
             
-            {/* Líneas verticales cortas en los costados */}
-            <div className="absolute left-2 top-1/3 bottom-1/3 w-px bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent"></div>
-            <div className="absolute right-2 top-1/3 bottom-1/3 w-px bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent"></div>
-            <div className="absolute left-4 top-1/4 bottom-1/4 w-px bg-gradient-to-b from-transparent via-blue-300/25 to-transparent"></div>
-            <div className="absolute right-4 top-1/4 bottom-1/4 w-px bg-gradient-to-b from-transparent via-blue-300/25 to-transparent"></div>
+            {/* Líneas verticales cortas en los costados - Más sutiles en móvil */}
+            <div className="absolute left-2 top-1/3 bottom-1/3 w-px bg-gradient-to-b from-transparent via-cyan-400/15 sm:via-cyan-400/30 to-transparent"></div>
+            <div className="absolute right-2 top-1/3 bottom-1/3 w-px bg-gradient-to-b from-transparent via-cyan-400/15 sm:via-cyan-400/30 to-transparent"></div>
+            <div className="hidden sm:block absolute left-4 top-1/4 bottom-1/4 w-px bg-gradient-to-b from-transparent via-blue-300/25 to-transparent"></div>
+            <div className="hidden sm:block absolute right-4 top-1/4 bottom-1/4 w-px bg-gradient-to-b from-transparent via-blue-300/25 to-transparent"></div>
             
-            {/* Líneas horizontales cortas arriba y abajo */}
-            <div className="absolute top-2 left-1/3 right-1/3 h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent"></div>
-            <div className="absolute bottom-2 left-1/3 right-1/3 h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent"></div>
-            <div className="absolute top-4 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-blue-300/25 to-transparent"></div>
-            <div className="absolute bottom-4 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-blue-300/25 to-transparent"></div>
+            {/* Líneas horizontales cortas arriba y abajo - Más sutiles en móvil */}
+            <div className="absolute top-2 left-1/3 right-1/3 h-px bg-gradient-to-r from-transparent via-cyan-400/15 sm:via-cyan-400/30 to-transparent"></div>
+            <div className="absolute bottom-2 left-1/3 right-1/3 h-px bg-gradient-to-r from-transparent via-cyan-400/15 sm:via-cyan-400/30 to-transparent"></div>
+            <div className="hidden sm:block absolute top-4 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-blue-300/25 to-transparent"></div>
+            <div className="hidden sm:block absolute bottom-4 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-blue-300/25 to-transparent"></div>
           </div>
           
           {/* Grid 2x2 con diseño profesional */}
