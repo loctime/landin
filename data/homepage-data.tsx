@@ -6,32 +6,32 @@ export const agents: Agent[] = [
   {
     name: "Mini Recordatorio",
     specialty: "Recordatorios de Citas",
-    avatar: "⏰",
+    avatar: "/tiniroborelo.png",
     description: "Envía recordatorios automáticos de citas a tus clientes vía WhatsApp",
   },
   {
     name: "Chatbot Básico",
     specialty: "Atención al Cliente",
-    avatar: "💬",
+    avatar: "/tinyrobotecla.png",
     description: "Responde consultas frecuentes y atiende a tus clientes 24/7",
   },
   {
     name: "Chatbot Plus",
     specialty: "Atención Avanzada",
-    avatar: "🤖",
+    avatar: "/tinyrobot11.png",
     description: "IA conversacional avanzada con integración a múltiples plataformas",
     featured: true,
   },
   {
     name: "Agente Telefónico",
     specialty: "Llamadas Automatizadas",
-    avatar: "📞",
+    avatar: "/tinirobottele.png",
     description: "Gestiona llamadas entrantes y salientes de forma inteligente",
   },
   {
     name: "Gestor de Pagos",
     specialty: "Automatización de Cobros",
-    avatar: "💳",
+    avatar: "/tinyrobodine.png",
     description: "Automatiza recordatorios de pago y gestión de cobros",
   },
 ]

@@ -1,8 +1,9 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { Card } from '@/components/ui/card'
+import { SpotlightCard } from '@/components/ui/spotlight-card'
 import { agents, companyLogos } from '@/data/homepage-data'
 import { Sparkles, Zap } from 'lucide-react'
 
@@ -34,31 +35,9 @@ const AgentsSection = React.memo(() => {
 
   return (
     <section id="servicios" className="py-8 sm:py-12 bg-black relative overflow-hidden">
-      {/* Efectos de fondo animados */}
-      <motion.div
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.02, 0.04, 0.02],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute top-1/4 left-1/4 w-96 h-96 bg-opptim-green rounded-full blur-3xl"
-      />
-      <motion.div
-        animate={{
-          scale: [1.2, 1, 1.2],
-          opacity: [0.02, 0.04, 0.02],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500 rounded-full blur-3xl"
-      />
+      {/* Efectos de fondo estáticos */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-opptim-green rounded-full blur-3xl opacity-0.03" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500 rounded-full blur-3xl opacity-0.03" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
@@ -75,12 +54,7 @@ const AgentsSection = React.memo(() => {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 bg-opptim-green/10 border border-opptim-green/30 px-4 py-2 rounded-full mb-6"
           >
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-            >
-              <Zap className="w- 4 h-4 text-opptim-green" />
-            </motion.div>
+            <Zap className="w-4 h-4 text-opptim-green" />
             <span className="text-opptim-green text-sm font-medium">Powered by AI</span>
           </motion.div>
 
@@ -148,11 +122,11 @@ const AgentsSection = React.memo(() => {
                 }}
                 className="h-full"
               >
-                <Card
+                <SpotlightCard
+                  spotlightColor="16, 185, 129" // opptim-green RGB
                   className={`
-                    relative bg-gradient-to-b from-gray-900/80 to-gray-900/50 backdrop-blur-sm
-                    border-opptim-green/20 p-4 sm:p-6 text-center cursor-pointer h-full
-                    hover:border-opptim-green/60 transition-colors duration-300 overflow-hidden
+                    relative p-4 sm:p-6 text-center cursor-pointer h-full
+                    hover:border-opptim-green/60 transition-all duration-300
                     ${agent.featured ? "border-opptim-green/60 ring-2 ring-opptim-green/30" : ""}
                   `}
                 >
@@ -164,51 +138,12 @@ const AgentsSection = React.memo(() => {
                       transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
                       className="absolute -top-1 -right-1 z-10"
                     >
-                      <motion.div
-                        animate={{
-                          rotate: [0, 12, -12, 0],
-                          scale: [1, 1.1, 1],
-                        }}
-                        transition={{
-                          duration: 3,
-                          repeat: Infinity,
-                          ease: "easeInOut",
-                        }}
-                        className="bg-gradient-to-r from-opptim-green to-emerald-400 text-black px-2.5 py-1 rounded-full text-xs font-bold flex items-center gap-1 shadow-lg shadow-opptim-green/50"
-                      >
+                      <div className="bg-gradient-to-r from-opptim-green to-emerald-400 text-black px-2.5 py-1 rounded-full text-xs font-bold flex items-center gap-1 shadow-lg shadow-opptim-green/50">
                         <Sparkles className="w-3 h-3" />
                         Popular
-                      </motion.div>
+                      </div>
                     </motion.div>
                   )}
-
-                  {/* Efecto de brillo de fondo */}
-                  <motion.div
-                    animate={{
-                      opacity: [0.03, 0.08, 0.03],
-                      scale: [1, 1.2, 1],
-                    }}
-                    transition={{
-                      duration: 4,
-                      repeat: Infinity,
-                      delay: index * 0.3,
-                    }}
-                    className="absolute inset-0 bg-gradient-to-br from-opptim-green/10 to-transparent"
-                  />
-
-                  {/* Partículas flotantes */}
-                  <motion.div
-                    animate={{
-                      y: [0, -15, 0],
-                      opacity: [0.1, 0.3, 0.1],
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                      delay: index * 0.2,
-                    }}
-                    className="absolute top-4 right-4 w-16 h-16 bg-opptim-green/20 rounded-full blur-xl"
-                  />
 
                   {/* Avatar con animaciones */}
                   <motion.div
@@ -219,60 +154,22 @@ const AgentsSection = React.memo(() => {
                     }}
                     className="relative mb-4 mx-auto"
                   >
-                    <motion.div
-                      animate={{
-                        y: [0, -10, 0],
-                      }}
-                      transition={{
-                        duration: 3,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                        delay: index * 0.2,
-                      }}
-                      className="relative"
-                    >
-                      {/* Anillo pulsante */}
-                      <motion.div
-                        animate={{
-                          scale: [1, 1.4, 1],
-                          opacity: [0.3, 0, 0.3],
-                        }}
-                        transition={{
-                          duration: 2,
-                          repeat: Infinity,
-                          ease: "easeOut",
-                        }}
-                        className="absolute inset-0 bg-opptim-green rounded-full"
-                      />
-                      
-                      {/* Anillo giratorio para featured */}
-                      {agent.featured && (
-                        <motion.div
-                          animate={{ rotate: 360 }}
-                          transition={{
-                            duration: 8,
-                            repeat: Infinity,
-                            ease: "linear",
-                          }}
-                          className="absolute -inset-2 border-2 border-dashed border-opptim-green/40 rounded-full"
-                        />
-                      )}
+                    <div className="relative">
 
-                      <div className="w-16 h-16 bg-gradient-to-br from-opptim-green/30 to-opptim-green/10 rounded-full flex items-center justify-center mx-auto text-3xl relative z-10 backdrop-blur-sm border border-opptim-green/30">
-                        <motion.div
-                          animate={{
-                            scale: [1, 1.05, 1],
-                          }}
-                          transition={{
-                            duration: 2,
-                            repeat: Infinity,
-                            delay: index * 0.3,
-                          }}
-                        >
-                          {agent.avatar}
-                        </motion.div>
+                      <div className="w-16 h-16 flex items-center justify-center mx-auto text-3xl relative z-10">
+                        {agent.avatar.includes('.png') || agent.avatar.includes('.jpg') || agent.avatar.includes('.svg') ? (
+                          <Image 
+                            src={agent.avatar} 
+                            alt={agent.name}
+                            width={64}
+                            height={64}
+                            className="object-contain"
+                          />
+                        ) : (
+                          agent.avatar
+                        )}
                       </div>
-                    </motion.div>
+                    </div>
                   </motion.div>
 
                   {/* Contenido */}
@@ -317,20 +214,7 @@ const AgentsSection = React.memo(() => {
                     transition={{ duration: 0.8, delay: 0.5 + index * 0.1 }}
                     className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-opptim-green to-transparent origin-center"
                   />
-
-                  {/* Brillo en hover */}
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-t from-opptim-green/0 via-opptim-green/5 to-opptim-green/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                    animate={{
-                      y: ['100%', '-100%'],
-                    }}
-                    transition={{
-                      duration: 1.5,
-                      repeat: Infinity,
-                      repeatDelay: 1,
-                    }}
-                  />
-                </Card>
+                </SpotlightCard>
               </motion.div>
             </motion.div>
           ))}
