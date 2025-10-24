@@ -1,0 +1,184 @@
+/* Variables CSS para el efecto eléctrico adaptado a Opptim */
+:root {
+  --electric-border-color: #00ff88; /* opptim-green */
+  --electric-light-color: oklch(from var(--electric-border-color) l c h);
+  --gradient-color: oklch(from var(--electric-border-color) 0.3 calc(c / 2) h / 0.4);
+  --color-neutral-900: oklch(0.185 0 0);
+}
+
+/* Contenedor principal con efecto eléctrico */
+.electric-card-container {
+  padding: 2px;
+  border-radius: 24px;
+  position: relative;
+  background: linear-gradient(
+      -30deg,
+      var(--gradient-color),
+      transparent,
+      var(--gradient-color)
+    ),
+    linear-gradient(
+      to bottom,
+      var(--color-neutral-900),
+      var(--color-neutral-900)
+    );
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Contenedor interno */
+.electric-inner-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Borde exterior */
+.electric-border-outer {
+  border: 2px solid rgba(0, 255, 136, 0.5);
+  border-radius: 24px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Tarjeta principal con filtro turbulento */
+.electric-main-card {
+  width: 100%;
+  min-height: 500px;
+  border-radius: 24px;
+  border: 2px solid var(--electric-border-color);
+  margin-top: -4px;
+  margin-left: -4px;
+  filter: url(#turbulent-displace);
+  background: linear-gradient(to-br, #1a1a1a, #000000);
+  position: relative;
+}
+
+/* Capas de glow */
+.electric-glow-layer-1 {
+  border: 2px solid rgba(0, 255, 136, 0.6);
+  border-radius: 24px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: blur(1px);
+  pointer-events: none;
+}
+
+.electric-glow-layer-2 {
+  border: 2px solid var(--electric-light-color);
+  border-radius: 24px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: blur(4px);
+  pointer-events: none;
+}
+
+/* Efectos de overlay - REMOVIDOS para quitar las luces blancas */
+/* .electric-overlay-1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 24px;
+  opacity: 1;
+  mix-blend-mode: overlay;
+  transform: scale(1.1);
+  filter: blur(16px);
+  background: linear-gradient(
+    -30deg,
+    white,
+    transparent 30%,
+    transparent 70%,
+    white
+  );
+  pointer-events: none;
+}
+
+.electric-overlay-2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 24px;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  transform: scale(1.1);
+  filter: blur(16px);
+  background: linear-gradient(
+    -30deg,
+    white,
+    transparent 30%,
+    transparent 70%,
+    white
+  );
+  pointer-events: none;
+}
+
+.electric-background-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 24px;
+  filter: blur(32px);
+  transform: scale(1.1);
+  opacity: 0.3;
+  z-index: -1;
+  background: linear-gradient(
+    -30deg,
+    var(--electric-light-color),
+    transparent,
+    var(--electric-border-color)
+  );
+  pointer-events: none;
+} */
+
+/* Contenedor de contenido */
+.electric-content-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  z-index: 10;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .electric-content-container {
+    padding: 1.5rem;
+  }
+  
+  .electric-main-card {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 640px) {
+  .electric-content-container {
+    padding: 1rem;
+  }
+  
+  .electric-main-card {
+    min-height: 350px;
+  }
+}
