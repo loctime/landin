@@ -25,10 +25,10 @@ export default function HomePage() {
       <HeroSection />
       <StatsSection />
       <AgentsSection />
+      <ProcessSection />
       <FeaturesAnimated />
       <AboutSection />
       <PricingBanner />
-      <ProcessSection />
       <TestimonialsSection />
       <FAQSection />
       <UrgencySection />

@@ -84,8 +84,19 @@ export const FeaturesAnimated = () => {
   }
 
   return (
-    <section className="py-8 bg-gradient-to-b from-black via-gray-900 to-black overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+    <section className="relative overflow-hidden min-h-screen">
+      {/* Fondo personalizado invertido */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(/fondo33.png)',
+          transform: 'scaleY(-1)',
+        }}
+      />
+      {/* Overlay para mejorar legibilidad */}
+      <div className="absolute inset-0 bg-black/20"></div>
+      
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 py-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
